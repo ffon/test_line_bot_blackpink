@@ -48,7 +48,7 @@
                     <div class="container">
                         <h2>Line Member </h2>
                         <?php $i=0; while ($i!=$count) {
-                            if ($line_member[$i]->line_master_id==$id) {?>
+                            if ($id==$line_member[$i]->line_master_id) {?>
                             
                             <div class="checkbox">
                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> <?php echo $line_member[$i]->id;
@@ -69,9 +69,8 @@
                         <textarea class="form-control" rows="5" id="textArea" name="text"></textarea><br>
                     </div>
 
-                    
-                        <input type="hiddie" value="<?php echo $id; ?>" name="id">
-                        
+                    <input type="hiddie" value="<?php echo $id; ?>" name="id">
+
                     <div align="center">
                         <button type="cancel" class="btn btn-danger">Cancel</button>
                         <button type="submit" class="btn btn-primary" name="submit">Send</button>
