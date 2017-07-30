@@ -82,10 +82,9 @@
                             </div>
                             <?php
                             $i++;
-                            } else {?>
-                            <?php echo "not found"; ?>
-                            
-                            <?    break;
+                            } else {
+                                echo "not found"; 
+                                break;
                             }
                         }
                         ?>
