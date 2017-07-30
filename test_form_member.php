@@ -34,32 +34,32 @@
 
         $line_member = json_decode($result);
         $count = count($line_member);
-        getToken($id);
+        //getToken($id);
     
-//     function getToken($id){
-//         $chAdd = curl_init();
-//         curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
-//         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-//         curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-//         curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
-//         "Content-Type: application/json",
-//                             )
-//         );
-//         $result = curl_exec($chAdd);
-//         $err    = curl_error($chAdd);
-//         curl_close($chAdd);
+    // function getToken($id){
+    //     $chAdd = curl_init();
+    //     curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
+    //     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+    //     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+    //     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+    //     "Content-Type: application/json",
+    //                         )
+    //     );
+    //     $result = curl_exec($chAdd);
+    //     $err    = curl_error($chAdd);
+    //     curl_close($chAdd);
 
-//         $line_master = json_decode($result);
-//         $countMas = count($line_master);
-//         $j=0;
-//         while($j!=$countMas){
-//             if($id==$line_master[$j]->id){
-//                 $token=$line_master[$j]->access_token;
-//             }
-//         }
-//         echo $token;
+    //     $line_master = json_decode($result);
+    //     $countMas = count($line_master);
+    //     $j=0;
+    //     while($j!=$countMas){
+    //         if($id==$line_master[$j]->id){
+    //             $token=$line_master[$j]->access_token;
+    //         }
+    //     }
+    //     echo $token;
         
-//     }
+    // }
 
     ?>
     <div class="container">
