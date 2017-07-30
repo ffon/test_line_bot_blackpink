@@ -45,7 +45,7 @@
                         <h2>Line@ </h2>
                         <?php $i=0; while ($i!=$count) { ?>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id"> <?php echo $line_master[$i]->line_name; ?></label><br>
+                                <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id"> <?php echo $line_master[$i]->id; echo " "; echo $line_master[$i]->line_name; ?></label><br>
                             </div>
                             <?$i++;
                             }
