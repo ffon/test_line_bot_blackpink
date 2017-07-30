@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
