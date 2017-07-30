@@ -55,7 +55,7 @@
                             <?php 
                             $i++; 
                             }else{?>
-                            <div class="checkbox">
+                            <div>
                                 <label><?php echo "not found"; ?></label><br>
                             </div>
                             <?    break;
