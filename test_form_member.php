@@ -51,7 +51,7 @@
                             if ($line_member[$i]->line_master_id==$id) {?>
                             
                             <div class="checkbox">
-                                <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>"> <?php echo $line_member[$i]->id;
+                                <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> <?php echo $line_member[$i]->id;
                                 echo " ";
                                 echo $line_member[$i]->member_name; ?></label><br>
                             </div>
@@ -66,7 +66,7 @@
                     </div>
                     <div>
                         <label>Text</label>
-                        <textarea class="form-control" rows="5" id="textArea" name="textArea"></textarea><br>
+                        <textarea class="form-control" rows="5" id="textArea" name="text"></textarea><br>
                     </div>
 
 <!--                     <div>
