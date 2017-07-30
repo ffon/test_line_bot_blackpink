@@ -69,10 +69,9 @@
                         <textarea class="form-control" rows="5" id="textArea" name="text"></textarea><br>
                     </div>
 
-                    <div>
+                    
                         <input type="hiddie" value="<?php echo $id; ?>" name="id">
-                    </div>
-
+                        
                     <div align="center">
                         <button type="cancel" class="btn btn-danger">Cancel</button>
                         <button type="submit" class="btn btn-primary" name="submit">Send</button>
