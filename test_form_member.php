@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-
+5
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -20,6 +20,9 @@
     <?php
 
         $id = $_GET['id'];
+    
+        echo $id;echo "<br>";
+    
         $chAdd = curl_init();
         curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -31,11 +34,10 @@
         $result = curl_exec($chAdd);
         $err    = curl_error($chAdd);
         curl_close($chAdd);
-
+    
         $line_member = json_decode($result);
         $count = count($line_member);
     
-
     ?>
     <div class="container">
         <div class="row">
@@ -77,10 +79,7 @@
                     </div>
                 </div>
             </form>
-
         </div>
     </div>
-
 </body>
-
 </html>
