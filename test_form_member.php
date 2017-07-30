@@ -42,7 +42,7 @@
                 <h1 align="center">Push Massages</h1>
             </div>
             
-            <form method="Get" action="pushMsg.php">
+            <form method="Get" action="test_pushMsg.php">
                 <div class="form-group">
                     <div class="container">
                         <h2>Line Member </h2>
