@@ -56,7 +56,7 @@
                             $i++; 
                             }else{?>
                             <div class="checkbox">
-                                <label><input> <?php echo "not found"; ?></label><br>
+                                <label><input type="text"> <?php echo "not found"; ?></label><br>
                             </div>
                             <?    break;
                             }
