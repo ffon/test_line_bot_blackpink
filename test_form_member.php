@@ -17,7 +17,8 @@
 </head>
 
 <body>
-        <?php
+    <?php
+
         $id = $_GET['id'];
         $chAdd = curl_init();
         curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
@@ -25,7 +26,7 @@
         curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
         "Content-Type: application/json",
-                                )
+                            )
         );
         $result = curl_exec($chAdd);
         $err    = curl_error($chAdd);
@@ -33,8 +34,33 @@
 
         $line_member = json_decode($result);
         $count = count($line_member);
+        getToken($id);
+    
+    function getToken($id){
+        $chAdd = curl_init();
+        curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
+        curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+        curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+        "Content-Type: application/json",
+                            )
+        );
+        $result = curl_exec($chAdd);
+        $err    = curl_error($chAdd);
+        curl_close($chAdd);
 
-     
+        $line_master = json_decode($result);
+        $countMas = count($line_master);
+        $j=0;
+        while($j!=$countMas){
+            if($id==$line_master[$j]->id){
+                $token=$line_master[$j]->access_token;
+            }
+        }
+        echo $token;
+        
+    }
+
     ?>
     <div class="container">
         <div class="row">
@@ -46,15 +72,17 @@
                 <div class="form-group">
                     <div class="container">
                         <h2>Line Member </h2>
-                        <?php $i=0; while($i!=$count){
-                            if($line_member[$i]->line_master_id==$id){?>
+                        <?php $i=0; while ($i!=$count) {
+                            if ($id==$line_member[$i]->line_master_id) {?>
                             
                             <div class="checkbox">
-                                <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>"> <?php echo $line_member[$i]->id; echo " "; echo $line_member[$i]->member_name; ?></label><br>
+                                <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>"> <?php echo $line_member[$i]->id;
+                                echo " ";
+                                echo $line_member[$i]->member_name; ?></label><br>
                             </div>
-                            <?php 
-                            $i++; 
-                            }else{?>
+                            <?php
+                            $i++;
+                            } else {?>
                             <div>
                                 <label><?php echo "not found"; ?></label><br>
                             </div>
@@ -66,6 +94,10 @@
                     <div>
                         <label>Text</label>
                         <textarea class="form-control" rows="5" id="textArea" name="textArea"></textarea><br>
+                    </div>
+
+                    <div>
+                        <input type="hiddie" value="<?php echo $token; ?>" name="token">
                     </div>
 
                     <div align="center">
