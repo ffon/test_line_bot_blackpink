@@ -73,7 +73,7 @@
                     <div class="container">
                         <h2>Line Member </h2>
                         <?php $i=0; while ($i!=$count) {
-                            if ($id==$line_member[$i]->line_master_id) {?>
+                            if ($line_member[$i]->line_master_id==$id) {?>
                             
                             <div class="checkbox">
                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>"> <?php echo $line_member[$i]->id;
@@ -83,9 +83,8 @@
                             <?php
                             $i++;
                             } else {?>
-                            <div>
-                                <label><?php echo "not found"; ?></label><br>
-                            </div>
+                            <?php echo "not found"; ?>
+                            
                             <?    break;
                             }
                         }
@@ -96,9 +95,9 @@
                         <textarea class="form-control" rows="5" id="textArea" name="textArea"></textarea><br>
                     </div>
 
-                    <div>
-                        <input type="hiddie" value="<?php echo $token; ?>" name="token">
-                    </div>
+<!--                     <div>
+                        <input type="hiddie" value="<?php //echo $token; ?>" name="token">
+                    </div> -->
 
                     <div align="center">
                         <button type="cancel" class="btn btn-danger">Cancel</button>
