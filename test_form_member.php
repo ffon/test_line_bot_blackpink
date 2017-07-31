@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="th">
-5
+2
+
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -18,11 +19,10 @@
 
 <body>
     <?php
-
         $id = $_GET['id'];
-    
-        echo $id;echo "<br>";
-    
+        var_dump($id);
+        echo "<br>";
+        
         $chAdd = curl_init();
         curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -39,47 +39,47 @@
         $count = count($line_member);
     
     ?>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 head-form">
-                <h1 align="center">Push Massages</h1>
-            </div>
-            
-            <form method="Get" action="test_pushMsg.php">
-                <div class="form-group">
-                    <div class="container">
-                        <h2>Line Member </h2>
-                        <?php $i=0; while ($i!=$count) {
-                            if ($id==$line_member[$i]->line_master_id) {?>
-                            
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> <?php echo $line_member[$i]->id;
-                                echo " ";
-                                echo $line_member[$i]->member_name; ?></label><br>
-                            </div>
-                            <?php
-                            $i++;
-                            } else {
-                                echo "not found"; 
-                                break;
-                            }
-                        }
-                        ?>
-                    </div>
-                    <div>
-                        <label>Text</label>
-                        <textarea class="form-control" rows="5" id="textArea" name="text"></textarea><br>
-                    </div>
-
-                    <input type="hiddie" value="<?php echo $id; ?>" name="id">
-
-                    <div align="center">
-                        <button type="cancel" class="btn btn-danger">Cancel</button>
-                        <button type="submit" class="btn btn-primary" name="submit">Send</button>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 head-form">
+                    <h1 align="center">Push Massages</h1>
                 </div>
-            </form>
+
+                <form method="Get" action="test_pushMsg.php">
+                    <div class="form-group">
+                        <div class="container">
+                            <h2>Line Member </h2>
+                            <?php 
+                            for ($i=0;$i<$count;$i++) {
+                                if ($id==$line_member[$i]->line_master_id) {?>
+
+                                <div class="checkbox">
+                                        <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> <?php echo $line_member[$i]->id;
+                                        echo " ";
+                                        echo $line_member[$i]->member_name; ?></label><br>
+                                </div>
+                                <?php
+                                } else {
+                                    echo "not found";
+                                    break;
+                                }
+                            }
+                        ?>
+                        </div>
+                        <div>
+                            <label>Text</label>
+                            <textarea class="form-control" rows="5" id="textArea" name="text"></textarea><br>
+                        </div>
+
+                        <div align="center">
+                            <input type="hidden" value="<?php echo $id; ?>" name="id"/>
+                            <button type="cancel" class="btn btn-danger">Cancel</button>
+                            <button type="submit" class="btn btn-primary" name="submit">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
 </body>
+
 </html>
