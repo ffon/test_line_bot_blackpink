@@ -41,21 +41,22 @@
                 <form method="Get" action="test_form_member.php">
                     <div class="form-group">
                         <div class="container" align="center">
-                            <h2>Line@ </h2>
+                            <h2>Line@</h2>
                             <?php  
-                            for ($i=0;$i<$count;$i++) { ?>
+                            while($i!=$count) { ?>
                                 <div class="checkbox">
                                     <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id[]"> <?php echo $line_master[$i]->id;
                                     echo " ";
                                     echo $line_master[$i]->line_name; ?></label><br>
                                 </div>
                             <?
+                            $i++;
                             }
                             ?>
                         </div>
                         <br><br><br>
                         <div align="center">
-                            <button type="cancel" class="btn btn-danger">Cancel</button>
+                            <button type="reset" value="Reset" class="btn btn-danger">Cancel</button>
                             <button type="submit" class="btn btn-primary" name="submit">Next</button>
                         </div>
                     </div>
