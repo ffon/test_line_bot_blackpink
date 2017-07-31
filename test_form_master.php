@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-0
+5
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -43,6 +43,7 @@
                         <div class="container" align="center">
                             <h2>Line@</h2>
                             <?php  
+                            $i=0;
                             while($i!=$count) { ?>
                                 <div class="checkbox">
                                     <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id[]"> <?php echo $line_master[$i]->id;
