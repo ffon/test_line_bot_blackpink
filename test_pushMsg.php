@@ -37,18 +37,22 @@ function getToken()
     $line_master = json_decode($result);
     $count = count($line_master);
     
+//     echo "<br>";
+//     var_dump($line_master);
+    $j=0;
+    while ($j!=$count) {
+        if ($id==$line_master[$j]->id) {
+            
+            $token=$line_master[$j]->access_token;
+            $line_name=$line_master[$j]->line_name;
+            
+        }
+        $j++;
+    }
     echo "<br>";
-    var_dump($line_master);
-    // $j=0;
-    // while ($j!=$count) {
-    //     // if ($id==$line_master[$j]->id) {
-    //         $token=$line_master[$j]->access_token;
-    //     //}
-    // }
-    // echo "<br>";
-    // echo "token";echo "<br>";
-    // echo $token;
+    echo $line_name;
+    echo "<br>";
+    echo "token";echo "<br>";
+    echo $token;
 }
-
-
 ?>
