@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-2
-
+1
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -73,7 +72,7 @@
 
                         <div align="center">
                             <input type="hidden" value="<?php echo $id; ?>" name="id"/>
-                            <button type="cancel" class="btn btn-danger">Cancel</button>
+                            <button type="reset" value="Reset" class="btn btn-danger">Cancel</button>
                             <button type="submit" class="btn btn-primary" name="submit">Send</button>
                         </div>
                     </div>
