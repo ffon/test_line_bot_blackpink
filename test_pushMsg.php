@@ -1,8 +1,8 @@
 <?php
 
-getToken($id);
+getToken();
 
-function getToken($id)
+function getToken()
 {
     $id = $_GET['id'];
     $mid = $_GET['mid'];
