@@ -1,7 +1,7 @@
 <?php
-$id = $_GET['id'];
-$mid = $_GET['mid'];
-$text = $_GET['text'];
+$id = $_POST['id'];
+$mid = $_POST['mid'];
+$text = $_POST['text'];
 echo "id";echo "<br>";
 var_dump($id);
 echo "<br>";
