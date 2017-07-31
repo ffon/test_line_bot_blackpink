@@ -18,7 +18,7 @@
 
 <body>
     <?php
-        $id = $_GET['id'];
+        $id = $_POST['id'];
         var_dump($id);
         echo "<br>";
         
