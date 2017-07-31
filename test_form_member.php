@@ -18,7 +18,7 @@
 
 <body>
     <?php
-        $id = $_POST['id'];
+        $id = $_GET['id'];
         var_dump($id);
         echo "<br>";
         
@@ -44,7 +44,7 @@
                     <h1 align="center">Push Massages</h1>
                 </div>
 
-                <form method="POST" action="test_pushMsg.php">
+                <form method="GET" action="test_pushMsg.php">
                     <div class="form-group">
                         <div class="container">
                             <h2>Line Member </h2>
