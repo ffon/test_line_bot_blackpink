@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-4
+0
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -18,62 +18,46 @@
 
 <body>
     <?php
-        $id = $_GET['id'];
-        var_dump($id);
-        echo "<br>";
-        
         $chAdd = curl_init();
-        curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
+        curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
         curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
         "Content-Type: application/json",
-                            )
+                                )
         );
         $result = curl_exec($chAdd);
         $err    = curl_error($chAdd);
         curl_close($chAdd);
-    
-        $line_member = json_decode($result);
-        $count = count($line_member);
-    
+        $line_master = json_decode($result);
+        $count = count($line_master);
+     
     ?>
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 head-form">
+                <div class="col-xs-25 head-form">
                     <h1 align="center">Push Massages</h1>
                 </div>
-
-                <form method="Get" action="test_pushMsg.php">
+                <form method="Get" action="test_form_member.php">
                     <div class="form-group">
-                        <div class="container">
-                            <h2>Line Member </h2>
-                            <?php 
-                            for ($i=0;$i<$count;$i++) {
-                                if ($id==$line_member[$i]->line_master_id) {?>
-
+                        <div class="container" align="center">
+                            <h2>Line@</h2>
+                            <?php  
+                            while($i!=$count) { ?>
                                 <div class="checkbox">
-                                        <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> <?php echo $line_member[$i]->id;
-                                        echo " ";
-                                        echo $line_member[$i]->member_name; ?></label><br>
+                                    <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id[]"> <?php echo $line_master[$i]->id;
+                                    echo " ";
+                                    echo $line_master[$i]->line_name; ?></label><br>
                                 </div>
-                                <?php
-                                } else {
-                                    echo "not found";
-                                    break;
-                                }
+                            <?
+                            $i++;
                             }
-                        ?>
+                            ?>
                         </div>
-                        <div>
-                            <label>Text</label>
-                            <textarea class="form-control" rows="5" id="textArea" name="text"></textarea><br>
-                        </div>
-
+                        <br><br><br>
                         <div align="center">
-                            <input type="hidden" value="<?php echo $id; ?>" name="id"/>
                             <button type="reset" value="Reset" class="btn btn-danger">Cancel</button>
-                            <button type="submit" class="btn btn-primary" name="submit">Send</button>
+                            <button type="submit" class="btn btn-primary" name="submit">Next</button>
                         </div>
                     </div>
                 </form>
