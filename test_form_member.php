@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-1
+4
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -44,23 +44,21 @@
                     <h1 align="center">Push Massages</h1>
                 </div>
 
-                <form method="Get" action="test_pushMsg.php">
+                <form method="GET" action="test_pushMsg.php">
                     <div class="form-group">
                         <div class="container">
                             <h2>Line Member </h2>
                             <?php 
                             for ($i=0;$i<$count;$i++) {
                                 if ($id==$line_member[$i]->line_master_id) {?>
-
                                 <div class="checkbox">
-                                        <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> <?php echo $line_member[$i]->id;
-                                        echo " ";
-                                        echo $line_member[$i]->member_name; ?></label><br>
+                                        <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
+                                      <?php echo $line_member[$i]->id;
+                                            echo " ";
+                                            echo $line_member[$i]->member_name; ?>
+                                       </label><br>
                                 </div>
                                 <?php
-                                } else {
-                                    echo "not found";
-                                    break;
                                 }
                             }
                         ?>
