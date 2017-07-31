@@ -38,7 +38,7 @@
                 <div class="col-xs-25 head-form">
                     <h1 align="center">Push Massages</h1>
                 </div>
-                <form method="GET" action="Muti_member.php">
+                <form method="GET" action="Muti_test_value.php">
                     <div class="form-group">
                         <div class="container" align="center">
                             <h2>Line@</h2>
@@ -49,6 +49,7 @@
                                     <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id[]"> <?php echo $line_master[$i]->id;
                                     echo " ";
                                     echo $line_master[$i]->line_name; ?></label><br>
+                                    <input type="hidden" value="<?php echo echo $line_master[$i]->access_token; ?>" name="access_token"/>
                                 </div>
                             <?
                             $i++;
