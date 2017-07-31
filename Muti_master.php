@@ -49,7 +49,7 @@
                                     <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id[]"> <?php echo $line_master[$i]->id;
                                     echo " ";
                                     echo $line_master[$i]->line_name; ?></label><br>
-                                    <input type="hidden" value="<?php echo echo $line_master[$i]->access_token; ?>" name="access_token"/>
+                                    <input type="hidden" value="<?php echo $line_master[$i]->access_token; ?>" name="access_token"/>
                                 </div>
                             <?
                             $i++;
