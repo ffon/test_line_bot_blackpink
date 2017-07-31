@@ -38,7 +38,7 @@
                 <div class="col-xs-25 head-form">
                     <h1 align="center">Push Massages</h1>
                 </div>
-                <form method="GET" action="Muti_test_value.php">
+                <form method="GET" action="Muti_test_member.php">
                     <div class="form-group">
                         <div class="container" align="center">
                             <h2>Line@</h2>
