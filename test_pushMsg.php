@@ -19,9 +19,6 @@ function getToken()
     echo "Text";echo "<br>";
     var_dump($text);
 
-    
-    
-    
     $chAdd = curl_init();
     curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -37,22 +34,43 @@ function getToken()
     $line_master = json_decode($result);
     $count = count($line_master);
     
-//     echo "<br>";
-//     var_dump($line_master);
+    echo "<br>";
+    var_dump($line_master);
     $j=0;
     while ($j!=$count) {
         if ($id==$line_master[$j]->id) {
-            
+
             $token=$line_master[$j]->access_token;
             $line_name=$line_master[$j]->line_name;
-            
+
         }
         $j++;
     }
-    echo "<br>";
+    echo "line@"."<br>";
     echo $line_name;
     echo "<br>";
     echo "token";echo "<br>";
     echo $token;
+
+    pushMsg($token,$mid,$text);
 }
+
+function pushMsg($token,$mids,$text){
+    echo "PUSHMSG";
+    echo "id";echo "<br>";
+    var_dump($id);echo "<br>";
+
+    
+    echo "mid";echo "<br>";
+    var_dump($mid);echo "<br>";
+
+    
+    echo "Text";echo "<br>";
+    var_dump($text);
+
+     echo "token";echo "<br>";
+    echo $token;echo "<br>";
+
+}
+
 ?>
