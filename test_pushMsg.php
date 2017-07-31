@@ -8,16 +8,16 @@ function getToken()
     $mid = $_GET['mid'];
     $text = $_GET['text'];
 
-    echo "id";echo "<br>";
-    var_dump($id);
+//     echo "id";echo "<br>";
+//     var_dump($id);
 
-    echo "<br>";
-    echo "mid";echo "<br>";
-    var_dump($mid);
+//     echo "<br>";
+//     echo "mid";echo "<br>";
+//     var_dump($mid);
 
-    echo "<br>";
-    echo "Text";echo "<br>";
-    var_dump($text);
+//     echo "<br>";
+//     echo "Text";echo "<br>";
+//     var_dump($text);
 
     $chAdd = curl_init();
     curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
@@ -47,8 +47,8 @@ function getToken()
     echo "line@"."<br>";
     echo $line_name;
     echo "<br>";
-    echo "token";echo "<br>";
-    echo $token;echo "<br>";
+//     echo "token";echo "<br>";
+//     echo $token;echo "<br>";
 
     pushMsg($token,$mid,$text);
 }
@@ -58,7 +58,6 @@ function pushMsg($token,$mids,$text){
     echo "mid";echo "<br>";
     var_dump($mids);echo "<br>";
 
-    
     echo "Text";echo "<br>";
     var_dump($text);
 
@@ -93,8 +92,6 @@ function pushMsg($token,$mids,$text){
 }
         echo "result ";echo "<br>";
         var_dump($result);
-    
-
 }
 
 ?>
