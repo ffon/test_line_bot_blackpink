@@ -48,14 +48,13 @@ function getToken()
     echo $line_name;
     echo "<br>";
     echo "token";echo "<br>";
-    echo $token;
+    echo $token;echo "<br>";
 
     pushMsg($token,$mid,$text);
 }
 
 function pushMsg($token,$mids,$text){
-    echo "PUSHMSG";
-  
+   
     echo "mid";echo "<br>";
     var_dump($mids);echo "<br>";
 
@@ -63,8 +62,38 @@ function pushMsg($token,$mids,$text){
     echo "Text";echo "<br>";
     var_dump($text);
 
-     echo "token";echo "<br>";
+    echo "token";echo "<br>";
     echo $token;echo "<br>";
+    
+    
+    foreach($mids as $key => $mid){        
+        $messages = [
+            "type" => "text",
+            "text" => $text
+        ];
+ 
+        $post_data = [
+            "to" => $mid,
+            "messages" => [$messages]
+        ];
+ 
+        $header = array(
+            'Content-Type: application/json',
+            'Authorization: Bearer ' . $token
+        );
+        $url = 'https://api.line.me/v2/bot/message/push';
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        $result = curl_exec($ch);
+        curl_close($ch);
+}
+        echo "result ";echo "<br>";
+        var_dump($result);
+    
 
 }
 
