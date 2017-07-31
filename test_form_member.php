@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-4
+1
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -44,7 +44,7 @@
                     <h1 align="center">Push Massages</h1>
                 </div>
 
-                <form method="GET" action="test_pushMsg.php">
+                <form method="POST" action="test_pushMsg.php">
                     <div class="form-group">
                         <div class="container">
                             <h2>Line Member </h2>
