@@ -34,8 +34,6 @@ function getToken()
     $line_master = json_decode($result);
     $count = count($line_master);
     
-    echo "<br>";
-    var_dump($line_master);
     $j=0;
     while ($j!=$count) {
         if ($id==$line_master[$j]->id) {
@@ -57,12 +55,9 @@ function getToken()
 
 function pushMsg($token,$mids,$text){
     echo "PUSHMSG";
-    echo "id";echo "<br>";
-    var_dump($id);echo "<br>";
-
-    
+  
     echo "mid";echo "<br>";
-    var_dump($mid);echo "<br>";
+    var_dump($mids);echo "<br>";
 
     
     echo "Text";echo "<br>";
