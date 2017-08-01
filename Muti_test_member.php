@@ -2,7 +2,7 @@
 $id = $_GET['id'];
 
 
-echo "id - ";
+echo "id::";
 echo "<br>";
 var_dump($id);
 echo "<br>";
