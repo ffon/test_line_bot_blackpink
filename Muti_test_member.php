@@ -27,9 +27,10 @@ function get_token($id){
     $i=0;
     while($i!=$count){
         if($line_master[$i]->id == $id){
-            $token = $line_master[$i]->access_token;
+            $token[$i] = $line_master[$i]->access_token;
         }
         $i++;
+        
     }
 
     echo "Token";echo "<br>";
@@ -38,6 +39,11 @@ function get_token($id){
 
 
 }
+
+
+
+
+
 
 
 ?>
