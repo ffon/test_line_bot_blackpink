@@ -2,7 +2,7 @@
 $id = $_GET['id'];
 
 
-echo "id :";echo "<br>";
+echo "id:";echo "<br>";
 var_dump($id);echo "<br>";
 
 get_token($id);
@@ -33,7 +33,7 @@ function get_token($id){
             //$token = $line_master[$i]->access_token;
             $count_id++;
            
-            break;
+            //break;
         }
         $i++;
     }
@@ -42,9 +42,6 @@ function get_token($id){
     var_dump($count_id);echo "<br>";
     echo "i";echo "<br>";
     var_dump($i);
-
-
-
 
 }
 
