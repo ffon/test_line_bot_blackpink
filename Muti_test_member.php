@@ -29,13 +29,13 @@ function get_token($id){
     while($i!=$count){
         if($line_master[$i]->id == $id){
             $token = $line_master[$i]->access_token;
+            $count_id++;
+            $i++;
         }
-        $count_id++;
-        $i++;
     }
 
     echo "count_id";echo "<br>";
-    var_dump($count_id);
+    var_dump($count_id);echo "<br>";
     echo "i";echo "<br>";
     var_dump($i);
 
