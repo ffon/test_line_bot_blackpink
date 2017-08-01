@@ -2,7 +2,7 @@
 $id = $_GET['id'];
 
 
-echo "id:";echo "<br>";
+echo "id :";echo "<br>";
 var_dump($id);echo "<br>";
 
 get_token($id);
@@ -24,14 +24,15 @@ function get_token($id){
     $line_master = json_decode($result);
     $count = count($line_master);
 
-    echo $id;echo "<br>";
+    var_dump($id);echo "<br>";
     
     $i=0;
     $count_id=0;
     while($i!=$count){
-        if($id==$line_master[$i]->id){
-            $token = $line_master[$i]->access_token;
+        if($id[$i]==$line_master[$i]->id){
+            //$token = $line_master[$i]->access_token;
             $count_id++;
+           
             break;
         }
         $i++;
