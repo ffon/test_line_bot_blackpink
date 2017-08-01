@@ -1,47 +1,49 @@
 <?php
-getToken();
-function getToken()
-{
+get_token();
+function get_token()
+{    
     $id = $_GET['id'];
     $mid = $_GET['mid'];
     $text = $_GET['text'];
-//     echo "id";echo "<br>";
-//     var_dump($id);
-//     echo "<br>";
-//     echo "mid";echo "<br>";
-//     var_dump($mid);
-//     echo "<br>";
-//     echo "Text";echo "<br>";
-//     var_dump($text);
-    $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_master');
-    curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-    curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_master');
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     "Content-Type: application/json",
                             )
     );
-    $result = curl_exec($chAdd);
-    $err    = curl_error($chAdd);
-    curl_close($chAdd);
+    $result = curl_exec($ch);
+    $err    = curl_error($ch);
+    curl_close($ch);
     $line_master = json_decode($result);
     $count = count($line_master);
-    
-    $j=0;
-    while ($j!=$count) {
-        if ($id==$line_master[$j]->id) {
-            $token=$line_master[$j]->access_token;
-            $line_name=$line_master[$j]->line_name;
-        }
-        $j++;
-    }
-    echo "line@"."<br>";
-    echo $line_name;
+    var_dump($id);
     echo "<br>";
-//     echo "token";echo "<br>";
-//     echo $token;echo "<br>";
-   // pushMsg($token,$mid,$text);
+    
+    $count_id=count($id);
+    echo "count_id";
+    echo "<br>";
+    var_dump($count_id);
+    echo "<br>";
+    
+    for ($i=0; $i<$count; $i++) {
+        for ($j=0; $j<$count_id; $j++) {
+            if ($id[$j]==$line_master[$i]->id) {
+                        $token[$j] = $line_master[$i]->access_token;
+            }
+        }
+    }
+   
+    echo "token";
+    echo "<br>";
+    var_dump($token);
+    echo "<br>";
+
+    //pushMsg($token,$mid,$text);
 }
+
 function pushMsg($token,$mids,$text){
    
     echo "mid";echo "<br>";
