@@ -21,6 +21,7 @@
     <?php
 
         $id = $_GET['id'];
+        $line_name = $_GET['line_name']; 
         echo "id";
         echo "<br>";
         var_dump($id);
@@ -58,7 +59,7 @@
                                     if ($id[$j] == $line_member[$i]->line_master_id) {?>
                                         <div class="checkbox">
                                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
-                                                <?php echo $line_member[$i]->line_master_id;
+                                                <?php echo $line_name;
                                                 echo " ";
                                                 echo $line_member[$i]->id;
                                                 echo " ";
