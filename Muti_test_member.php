@@ -40,8 +40,6 @@
         $line_member = json_decode($result);
         $count = count($line_member);
         $count_id = count($id);
-
-
     
     ?>
         <div class="container">
@@ -59,9 +57,14 @@
                                 for ($j=0; $j<$count_id; $j++) {
                                     if ($id[$j] == $line_member[$i]->line_master_id) {?>
                                         <div class="checkbox">
-                                                <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> <?php echo $line_member[$i]->id;
+                                                <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
+                                                <?php echo $line_member[$i]->line_master_id;
                                                 echo " ";
-                                                echo $line_member[$i]->member_name; ?></label><br>
+                                                echo $line_member[$i]->id;
+                                                echo " ";
+                                                echo $line_member[$i]->member_name;
+                                                ?>
+                                                </label><br>
                                         </div>
                                 <?php
                                     }
