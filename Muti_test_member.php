@@ -21,7 +21,7 @@
     <?php
 
         $id = $_GET['id'];
-        echo "id++";
+        echo "id";
         echo "<br>";
         var_dump($id);
         echo "<br>";
@@ -60,6 +60,8 @@
                                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
                                                 <?php echo $line_member[$i]->line_master_id;
                                                 echo " ";
+                                                echo $line_member[$i]->id;
+                                                echo " ";
                                                 echo $line_member[$i]->member_name;
                                                 ?>
                                                 </label><br>
@@ -75,8 +77,37 @@
                             <textarea class="form-control" rows="5" id="textArea" name="text"></textarea><br>
                         </div>
 
+                        <?php
+                            $ch = curl_init();
+                            curl_setopt($ch, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_master');
+                            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                            "Content-Type: application/json",
+                                                    )
+                            );
+                            $result = curl_exec($ch);
+                            $err    = curl_error($ch);
+                            curl_close($ch);
+                            $line_master = json_decode($result);
+                            $count = count($line_master);
+                          
+                            $count_id=count($id);
+                        ?>
+
                         <div align="center">
-                            <input type="hidden" value="<?php echo $id; ?>" name="id[]"/>
+                        <?php
+                        for ($i=0; $i<$count; $i++) {
+                            for ($j=0; $j<$count_id; $j++) {
+                                if ($id[$j]==$line_master[$i]->id) {?>
+                                    <input type="hidden" value="<?php  $token[$j] = $line_master[$i]->access_token;
+                                    echo $token[$j]; ?>" name="token[]"/>
+                                    <?php
+                                }
+                            }
+                        }
+                            
+                        ?>
                             <button type="reset" value="Reset" class="btn btn-danger">Cancel</button>
                             <button type="submit" class="btn btn-primary" name="submit">Send</button>
                         </div>
