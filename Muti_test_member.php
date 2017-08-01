@@ -1,27 +1,20 @@
 <?php
+
 $id = $_GET['id'];
 $access_token = $_GET['access_token'];
+$line_name = $_GET['line_name'];
 
 echo "id";echo "<br>";
-var_dump($id);
+var_dump($id);echo "<br>";
 
 echo "access_token";echo "<br>";
-var_dump($access_token);
+var_dump($access_token);echo "<br>";
 
-$chAdd = curl_init();
-curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
-curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
-"Content-Type: application/json",
-                    )
-);
-$result = curl_exec($chAdd);
-$err    = curl_error($chAdd);
-curl_close($chAdd);
+echo "line_name";echo "<br>";
+var_dump($line_name);echo "<br>";
 
-$line_member = json_decode($result);
-$count = count($line_member);
+
+
 
 
 ?>
