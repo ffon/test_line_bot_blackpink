@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-111
+1
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -46,11 +46,11 @@
                             $i=0;
                             while($i!=$count) { ?>
                                 <div class="checkbox">
-                                    <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id[]"> <?php echo $line_master[$i]->id;
+                                    <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id[]"> <?php $id = $line_master[$i]->id; echo $id;
                                     echo " ";
                                     echo $line_master[$i]->line_name; ?></label><br>
-                                    <input type="hidden" value="<?php echo $line_master[$i]->access_token; ?>" name="access_token[]"/>
-                                    <input type="hidden" value="<?php echo $line_master[$i]->line_name; ?>" name="line_name[]"/>
+                                    <!-- <input type="hidden" value="<?php echo $line_master[$i]->access_token; ?>" name="access_token[]"/>
+                                    <input type="hidden" value="<?php echo $line_master[$i]->line_name; ?>" name="line_name[]"/> -->
                                 </div>
                             <?
                             $i++;
