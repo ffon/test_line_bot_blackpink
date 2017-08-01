@@ -39,7 +39,7 @@ function get_token($id)
     for ($i=0; $i<$count; $i++) {
         for ($j=0; $j<$count_id; $j++) {
             if ($id[$j]==$line_master[$i]->id) {
-                        $token[$i] = $line_master[$i]->access_token;
+                        $token[$j] = $line_master[$i]->access_token;
             }
         }
     }
