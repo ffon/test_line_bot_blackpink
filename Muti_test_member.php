@@ -30,7 +30,7 @@ function get_token($id){
     $count_id=0;
     while($i!=$count){
         if($id[$i]==$line_master[$i]->id){
-            //$token[$i] = $line_master[$i]->access_token;
+            $token = $line_master[$i]->access_token;
             $count_id++;
         }
         $i++;
