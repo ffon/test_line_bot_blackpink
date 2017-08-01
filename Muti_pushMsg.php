@@ -3,7 +3,7 @@ get_token();
 
 function get_token()
 {    
-    $id = $_GET['id'];
+    $id = $_GET['token'];
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
