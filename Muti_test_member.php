@@ -76,7 +76,7 @@
                         </div>
 
                         <div align="center">
-                            <input type="hidden" value="<?php echo $id; ?>" name="id"/>
+                            <input type="hidden" value="<?php echo $id; ?>" name="id[]"/>
                             <button type="reset" value="Reset" class="btn btn-danger">Cancel</button>
                             <button type="submit" class="btn btn-primary" name="submit">Send</button>
                         </div>
