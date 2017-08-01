@@ -2,7 +2,7 @@
 $id = $_GET['id'];
 
 
-echo "id - ";
+echo "id :: ";
 echo "<br>";
 var_dump($id);
 echo "<br>";
@@ -68,6 +68,8 @@ function filter_member($id){
     $count = count($line_member);
 
     echo "filter_member"; echo "<br>";
+    echo "id"; echo "<br>";
+    echo $id; echo "<br>";
     $i=0;
     while($i!=$count){
         if($id[$i] == $line_member[$i]->line_master_id){
