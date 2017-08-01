@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-1
+52
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -49,8 +49,11 @@
                                     <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id[]"> <?php $id = $line_master[$i]->id; echo $id;
                                     echo " ";
                                     echo $line_master[$i]->line_name; ?></label><br>
-                                    <!-- <input type="hidden" value="<?php echo $line_master[$i]->access_token; ?>" name="access_token[]"/>
-                                    <input type="hidden" value="<?php echo $line_master[$i]->line_name; ?>" name="line_name[]"/> -->
+                                    <?php if($id == $line_master[$i]){ ?>
+                                    <input type="hidden" value="<?php echo $line_master[$i]->access_token; ?>" name="access_token[]"/>
+                                    <input type="hidden" value="<?php echo $line_master[$i]->line_name; ?>" name="line_name[]"/> 
+                                    <?
+                                    } ?>
                                 </div>
                             <?
                             $i++;
