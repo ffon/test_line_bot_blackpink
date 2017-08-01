@@ -84,8 +84,7 @@ function filter_member($id)
                 echo $line_member[$i]->user_id;
                 echo "     ";
             }
-            echo "<br>";
         }
-        
+        echo "<br>";
     }
 }
