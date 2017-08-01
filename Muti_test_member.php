@@ -92,7 +92,7 @@ function filter_member($id)
                 echo "  ";
                 echo $line_member[$i]->user_id;
                 echo "  ";
-            }
+            //}
         }
         echo "<br>";
     }
