@@ -36,6 +36,9 @@ function get_token($id){
 
     echo "count_id";echo "<br>";
     var_dump($count_id);
+    echo "i";echo "<br>";
+    var_dump($i);
+
 
 
 
