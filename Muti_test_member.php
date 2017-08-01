@@ -2,12 +2,13 @@
 $id = $_GET['id'];
 
 
-echo "id :: ";
+echo "id - ";
 echo "<br>";
 var_dump($id);
 echo "<br>";
 
 get_token($id);
+filter_member($id);
 
 function get_token($id)
 {
@@ -30,8 +31,6 @@ function get_token($id)
     var_dump($id);
     echo "<br>";
     
-   
-   
     $count_id=count($id);
     echo "count_id";echo "<br>";
     var_dump($count_id);echo "<br>";
@@ -43,12 +42,41 @@ function get_token($id)
             }
         }
     }
-  
-
     
     echo "i";echo "<br>";
     var_dump($i);
 
     echo "token";echo "<br>";
     var_dump($token);echo "<br>";
+}
+
+function filter_member($id){
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    "Content-Type: application/json",
+                            )
+    );
+    $result = curl_exec($ch);
+    $err    = curl_error($ch);
+    curl_close($ch);
+
+    $line_member = json_decode($result);
+    $count = count($line_member);
+
+    echo "filter_member"; echo "<br>";
+    $i=0;
+    while($i!=$count){
+        if($id[$i] == $line_member[$i]->line_master_id){
+            echo $line_member[$i]->line_master_id; echo " ";
+            echo $line_member[$i]->member_name; echo " ";
+            echo $line_member[$i]->user_id; echo " ";
+        }
+        echo "<br>";
+    }
+
+
 }
