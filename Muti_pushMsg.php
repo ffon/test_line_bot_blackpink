@@ -40,7 +40,7 @@ function getToken()
     echo "<br>";
 //     echo "token";echo "<br>";
 //     echo $token;echo "<br>";
-    pushMsg($token,$mid,$text);
+   // pushMsg($token,$mid,$text);
 }
 function pushMsg($token,$mids,$text){
    
