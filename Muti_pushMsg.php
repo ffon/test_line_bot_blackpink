@@ -6,7 +6,7 @@
     
     echo "id";
     echo "<br>";
-    var_dump($id);
+    var_dump($token);
     echo "<br>";
     echo "mid";
     echo "<br>";
@@ -16,7 +16,7 @@
     echo "<br>";
     var_dump($text);
     echo "<br>";
-    
+
 foreach ($mids as $key => $mid) {
     $messages = [
     "type" => "text",
