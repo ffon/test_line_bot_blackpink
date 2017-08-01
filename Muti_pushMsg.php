@@ -4,7 +4,7 @@
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-    echo "id";
+    echo "token";
     echo "<br>";
     var_dump($token);
     echo "<br>";
