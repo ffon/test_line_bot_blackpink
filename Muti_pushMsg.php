@@ -8,11 +8,11 @@ function get_token()
     $text = $_GET['text'];
     
     echo "id"; echo "<br>";
-    var_dump($id);
+    var_dump($id); echo "<br>";
     echo "mid"; echo "<br>";
-    var_dump($mid);
+    var_dump($mid); echo "<br>";
     echo "text"; echo "<br>";
-    var_dump($text);
+    var_dump($text); echo "<br>";
 
 //     $ch = curl_init();
 //     curl_setopt($ch, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_master');
