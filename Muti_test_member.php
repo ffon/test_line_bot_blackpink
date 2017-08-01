@@ -2,7 +2,7 @@
 $id = $_GET['id'];
 
 
-echo "id :: ";
+echo "id - ";
 echo "<br>";
 var_dump($id);
 echo "<br>";
@@ -32,8 +32,10 @@ function get_token($id)
     echo "<br>";
     
     $count_id=count($id);
-    echo "count_id";echo "<br>";
-    var_dump($count_id);echo "<br>";
+    echo "count_id";
+    echo "<br>";
+    var_dump($count_id);
+    echo "<br>";
     
     for ($i=0; $i<$count; $i++) {
         for ($j=0; $j<$count_id; $j++) {
@@ -43,14 +45,18 @@ function get_token($id)
         }
     }
     
-    echo "i";echo "<br>";
+    echo "i";
+    echo "<br>";
     var_dump($i);
 
-    echo "token";echo "<br>";
-    var_dump($token);echo "<br>";
+    echo "token";
+    echo "<br>";
+    var_dump($token);
+    echo "<br>";
 }
 
-function filter_member($id){
+function filter_member($id)
+{
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
@@ -66,20 +72,28 @@ function filter_member($id){
 
     $line_member = json_decode($result);
     $count = count($line_member);
+    $count_id = count($id);
 
-    echo "filter_member"; echo "<br>";
-    echo "id"; echo "<br>";
-    echo $id; echo "<br>";
+    echo "filter_member";
+    echo "<br>";
     $i=0;
-    while($i!=$count){
-        if($id[$i] == $line_member[$i]->line_master_id){
-            echo $line_member[$i]->line_master_id; echo " ";
-            echo $line_member[$i]->member_name; echo " ";
-            echo $line_member[$i]->user_id; echo " ";
+    $j=0;
+    while ($i!=$count) {
+        while ($j!=$count_id) {
+            if ($id[$j] == $line_member[$i]->line_master_id) {
+                echo $line_member[$j]->line_master_id;
+                echo "  ";
+                echo $line_member[$j]->line_master_id;
+                echo "  ";
+                echo $line_member[$j]->member_name;
+                echo "  ";
+                echo $line_member[$j]->user_id;
+                echo "  ";
+                $j++;
+            }
         }
+        
         echo "<br>";
         $i++;
     }
-
-
 }
