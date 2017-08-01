@@ -76,24 +76,24 @@ function filter_member($id)
 
     echo "filter_member";
     echo "<br>";
-    $i=0;
-    $j=0;
-    while ($i!=$count) {
-        while ($j!=$count_id) {
+
+    echo "id"; echo "<br>";
+    var_dump($id); echo "<br>";
+    
+    
+    for ($i=0; $i<$count; $i++) {
+        for ($j=0; $j<$count_id; $j++) {
             if ($id[$j] == $line_member[$i]->line_master_id) {
                 echo $line_member[$j]->line_master_id;
                 echo "  ";
-                echo $line_member[$j]->line_master_id;
+                echo $line_member[$j]->id;
                 echo "  ";
                 echo $line_member[$j]->member_name;
                 echo "  ";
                 echo $line_member[$j]->user_id;
                 echo "  ";
-                $j++;
             }
         }
-        
         echo "<br>";
-        $i++;
     }
 }
