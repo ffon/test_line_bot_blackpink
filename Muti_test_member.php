@@ -2,7 +2,7 @@
 $id = $_GET['id'];
 
 
-echo "id - ";
+echo "id::";
 echo "<br>";
 var_dump($id);
 echo "<br>";
@@ -83,38 +83,38 @@ function filter_member($id)
     echo "<br>";
     
     
-    // for ($i=0; $i<$count; $i++) {
-    //     for ($j=0; $j<$count_id; $j++) {
-    //         if ($id[$j] == $line_member[$i]->line_master_id) {
-    //             echo $line_member[$j]->line_master_id;
-    //             echo "  ";
-    //             echo $line_member[$j]->id;
-    //             echo "  ";
-    //             echo $line_member[$j]->member_name;
-    //             echo "  ";
-    //             echo $line_member[$j]->user_id;
-    //             echo "  ";
-    //         }
-    //     }
-    //     echo "<br>";
-    // }
+    for ($i=0; $i<$count; $i++) {
+        for ($j=0; $j<$count_id; $j++) {
+            if ($id[$j] == $line_member[$i]->line_master_id) {
+                echo $line_member[$j]->line_master_id;
+                echo "  ";
+                echo $line_member[$j]->id;
+                echo "  ";
+                echo $line_member[$j]->member_name;
+                echo "  ";
+                echo $line_member[$j]->user_id;
+                echo "  ";
+            }
+        }
+        echo "<br>";
+    }
 
 
     
-    $j=0;
-    $i=0;
-    while ($i!=$count) {
-        if ($id[$i] == $line_member[$i]->line_master_id) {
-            echo $line_member[$i]->line_master_id;
-            echo "  ";
-            echo $line_member[$i]->id;
-            echo "  ";
-            echo $line_member[$i]->member_name;
-            echo "  ";
-            echo $line_member[$i]->user_id;
-            echo "  ";
-        }
-        echo "<br>";
-        $i++;
-    }
+//     $j=0;
+//     $i=0;
+//     while ($i!=$count) {
+//         if ($id[$i] == $line_member[$i]->line_master_id) {
+//             echo $line_member[$i]->line_master_id;
+//             echo "  ";
+//             echo $line_member[$i]->id;
+//             echo "  ";
+//             echo $line_member[$i]->member_name;
+//             echo "  ";
+//             echo $line_member[$i]->user_id;
+//             echo "  ";
+//         }
+//         echo "<br>";
+//         $i++;
+//     }
 }
