@@ -4,7 +4,7 @@
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-echo "5555"."<br>";
+echo "......"."<br>";
 
 foreach ($mids as $key => $mid) {
     $messages = [
@@ -16,11 +16,13 @@ foreach ($mids as $key => $mid) {
     "to" => $mid,
     "messages" => [$messages]
     ];
- 
-    $header = array(
-    'Content-Type: application/json',
-    'Authorization: Bearer ' . $token
-    );
+    for($token as $key => $tokens){
+        
+        $header = array(
+        'Content-Type: application/json',
+        'Authorization: Bearer ' . $tokens
+        );
+    }
     $url = 'https://api.line.me/v2/bot/message/push';
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_POST, true);
