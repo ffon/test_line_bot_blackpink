@@ -34,6 +34,7 @@ foreach ($mids as $key => $mid) {
     echo "result ";
     echo "<br>";
     var_dump($result);
+    echo "<br>";
     echo "token";
     echo "<br>";
     var_dump($token);
