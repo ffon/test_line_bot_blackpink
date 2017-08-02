@@ -76,7 +76,7 @@
                                         <div class="checkbox">
                                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
                                                 <?php
-                                                echo $line_master[$i]->line_master_id;
+                                                echo $line_member[$i]->line_master_id;
                                                 echo "    ";
                                                 echo $line_member[$i]->id;
                                                 echo "    ";
