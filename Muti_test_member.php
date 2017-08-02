@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-1
+11
 <br>
 <head>
     <title>Push Messages</title>
@@ -99,7 +99,7 @@
                         for ($i=0; $i<$count_master; $i++) {
                             for ($j=0; $j<$count_id; $j++) {
                                 if ($id[$j]==$line_master[$i]->id) {?>
-                                    <input type="hidden" value="<?php  $token[$j] = array("$id[$j]" => $line_master[$i]->access_token);
+                                    <input type="hidden" value="<?php  $token[$j] = array($id[$j] => $line_master[$i]->access_token);
                                     var_dump($token[$j]); ?>" name="token[]"/>
                                     <?php
                                 }
