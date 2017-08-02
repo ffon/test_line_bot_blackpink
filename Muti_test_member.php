@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-111
+12
 <br>
 <head>
     <title>Push Messages</title>
@@ -38,7 +38,7 @@
         $err    = curl_error($ch);
         curl_close($ch);
         $line_member = json_decode($result);
-        $count = count($line_member);
+        $count_member = count($line_member);
         $count_id = count($id);
     
     ?>
@@ -60,7 +60,7 @@
                     $err    = curl_error($ch);
                     curl_close($ch);
                     $line_master = json_decode($result);
-                    $count = count($line_master);
+                    $count_master = count($line_master);
 
                    // $count_id=count($id);
                  ?>
@@ -70,7 +70,7 @@
                         <div class="container">
                             <h2>Line Member </h2>
                             <?php
-                            for ($i=0; $i<$count; $i++) {
+                            for ($i=0; $i<$count_member; $i++) {
                                 for ($j=0; $j<$count_id; $j++) {
                                     if ($id[$j] == $line_member[$i]->line_master_id) {?>
                                         <div class="checkbox">
@@ -97,7 +97,7 @@
                         
                         <div align="center">
                         <?php
-                        for ($i=0; $i<$count; $i++) {
+                        for ($i=0; $i<$count_master; $i++) {
                             for ($j=0; $j<$count_id; $j++) {
                                 if ($id[$j]==$line_master[$i]->id) {?>
                                     <input type="hidden" value="<?php  $token[$j] = $line_master[$i]->access_token;
