@@ -75,15 +75,11 @@
                                         <div class="checkbox">
                                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
                                                 <?php
-                                                //if($line_member[$i]->line_master_id == $line_master[$j]->id){
-                                                    
                                                     echo "(";
                                                     echo $line_member[$i]->created_user;
                                                     echo ")";
                                                     echo "     ";
-                                                    echo $line_member[$i]->member_name;
-                                                //}
-                                                                                                   
+                                                    echo $line_member[$i]->member_name;                                
                                                 ?>
                                                 </label><br>
                                         </div>
@@ -103,8 +99,8 @@
                         for ($i=0; $i<$count_master; $i++) {
                             for ($j=0; $j<$count_id; $j++) {
                                 if ($id[$j]==$line_master[$i]->id) {?>
-                                    <input type="hidden" value="<?php  $token[$j] = $line_master[$i]->access_token;
-                                    echo $token[$j]; ?>" name="token[]"/>
+                                    <input type="hidden" value="<?php  $token = array("$id" => $line_master[$i]->access_token);
+                                    echo $token ?>" name="token[]"/>
                                     <?php
                                 }
                             }
