@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-5
+1
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -50,9 +50,9 @@
                                     echo " ";
                                     echo $line_master[$i]->line_name; ?></label><br>
                                 </div>
-                                <div>
-                                    <input type="hidden" value="<?php  echo $line_master[$i]->line_name; ?>" name="line_name[]"/>
-                                </div>
+<!--                                 <div>
+                                    <input type="hidden" value="<?php  //echo $line_master[$i]->line_name; ?>" name="line_name[]"/>
+                                </div> -->
                             <?
                             $i++;
                             }
