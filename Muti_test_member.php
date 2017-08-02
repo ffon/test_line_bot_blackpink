@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-11
+12
 <br>
 <head>
     <title>Push Messages</title>
@@ -61,7 +61,6 @@
                     curl_close($ch);
                     $line_master = json_decode($result);
                     $count_master = count($line_master);
-
                    // $count_id=count($id);
                  ?>
 
@@ -76,11 +75,14 @@
                                         <div class="checkbox">
                                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
                                                 <?php
+                                                if($line_member[$i]->line_master_id == $line_master[$i]->id){
+                                                    
                                                     echo $line_master[$i]->line_name;
                                                     echo " ";
                                                     echo $line_member[$i]->id;
                                                     echo " ";
                                                     echo $line_member[$i]->member_name;
+                                                }                                                   
                                                 ?>
                                                 </label><br>
                                         </div>
