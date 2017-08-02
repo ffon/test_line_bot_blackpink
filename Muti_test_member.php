@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-11
+123
 <br>
 <head>
     <title>Push Messages</title>
@@ -101,7 +101,7 @@
                                 if ($id[$j]==$line_master[$i]->id) {
                                      $token[$j] = array("$id[$j]" => $line_master[$i]->access_token);
                                     ?>
-                                    <input type="hidden" value="<?$token[$j]?>" name="token[]"/>
+                                    <input type="hidden" value="<? print_r($token[$j])?>" name="token[]"/>
                                     <?php
                                 }
                             }
