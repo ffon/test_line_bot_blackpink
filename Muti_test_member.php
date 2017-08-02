@@ -62,7 +62,7 @@
                     $line_master = json_decode($result);
                     $count_master = count($line_master);
                    // $count_id=count($id);
-                 ?>
+                    ?>
 
                 <form method="GET" action="Muti_pushMsg.php">
                     <div class="form-group">
@@ -75,14 +75,18 @@
                                         <div class="checkbox">
                                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
                                                 <?php
-                                                if($line_member[$i]->line_master_id == $line_master[$i]->id){
-                                                    
-                                                    echo $line_master[$i]->line_name;
-                                                    echo " ";
-                                                } 
-                                                echo $line_member[$i]->id;
-                                                echo " ";
-                                                echo $line_member[$i]->member_name;                                                   
+                                                //if($line_member[$i]->line_master_id == $line_master[$j]->id){
+                                                    $line_member[$i]->line_master_id;
+                                                    echo "  ";
+                                                    $line_master[$i]->id;
+                                                    echo "  ";
+                                                    //echo $line_master[$i]->line_name;
+                                                    echo "  ";
+                                                    echo $line_member[$i]->id;
+                                                    echo "  ";
+                                                    echo $line_member[$i]->member_name;
+                                                //}
+                                                                                                   
                                                 ?>
                                                 </label><br>
                                         </div>
@@ -108,7 +112,6 @@
                                 }
                             }
                         }
-                            
                         ?>
                             <button type="reset" value="Reset" class="btn btn-danger">Cancel</button>
                             <button type="submit" class="btn btn-primary" name="submit">Send</button>
