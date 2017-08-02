@@ -4,7 +4,7 @@
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-
+echo "5555"."<br>";
 
 foreach ($mids as $key => $mid) {
     $messages = [
