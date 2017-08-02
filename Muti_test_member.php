@@ -67,12 +67,12 @@
                     <div class="form-group">
                         <div class="container">
                             <h2>Line Member </h2>
+                            <label>(Line@) Member name</label>
                             <?php
                             for ($i=0; $i<$count_member; $i++) {
                                 for ($j=0; $j<$count_id; $j++) {
                                     if ($id[$j] == $line_member[$i]->line_master_id) {?>
                                         <div class="checkbox">
-                                            <label>(Line@) Member name</label>
                                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
                                                 <?php
                                                 //if($line_member[$i]->line_master_id == $line_master[$j]->id){
