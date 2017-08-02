@@ -4,18 +4,7 @@
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-    echo "token";
-    echo "<br>";
-    var_dump($token);
-    echo "<br>";
-    echo "mid";
-    echo "<br>";
-    var_dump($mid);
-    echo "<br>";
-    echo "text";
-    echo "<br>";
-    var_dump($text);
-    echo "<br>";
+
 
 foreach ($mids as $key => $mid) {
     $messages = [
@@ -45,3 +34,15 @@ foreach ($mids as $key => $mid) {
     echo "result ";
     echo "<br>";
     var_dump($result);
+    echo "token";
+    echo "<br>";
+    var_dump($token);
+    echo "<br>";
+    echo "mid";
+    echo "<br>";
+    var_dump($mid);
+    echo "<br>";
+    echo "text";
+    echo "<br>";
+    var_dump($text);
+    echo "<br>";
