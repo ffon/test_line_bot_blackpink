@@ -1,38 +1,8 @@
 <?php
-
     $token = $_GET['token'];
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-echo "......"."<br>";
-
-foreach ($mids as $key => $mid) {
-    $messages = [
-    "type" => "text",
-    "text" => $text
-    ];
- 
-    $post_data = [
-    "to" => $mid,
-    "messages" => [$messages]
-    ];
-   
-        
-        $header = array(
-        'Content-Type: application/json',
-        'Authorization: Bearer ' . $token
-        );
-    
-    $url = 'https://api.line.me/v2/bot/message/push';
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-    $result = curl_exec($ch);
-    curl_close($ch);
-}
     echo "result ";
     echo "<br>";
     var_dump($result);
@@ -49,3 +19,33 @@ foreach ($mids as $key => $mid) {
     echo "<br>";
     var_dump($text);
     echo "<br>";
+    
+// foreach(token as $key => $tokens){
+// foreach ($mids as $key => $mid) {
+//     $messages = [
+//     "type" => "text",
+//     "text" => $text
+//     ];
+ 
+//     $post_data = [
+//     "to" => $mid,
+//     "messages" => [$messages]
+//     ];
+   
+        
+//         $header = array(
+//         'Content-Type: application/json',
+//         'Authorization: Bearer ' . $tokens
+//         );
+    
+//     $url = 'https://api.line.me/v2/bot/message/push';
+//     $ch = curl_init($url);
+//     curl_setopt($ch, CURLOPT_POST, true);
+//     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
+//     curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+//     $result = curl_exec($ch);
+//     curl_close($ch);
+// }
+// }
