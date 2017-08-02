@@ -50,9 +50,9 @@
                                     echo " ";
                                     echo $line_master[$i]->line_name; ?></label><br>
                                 </div>
-<!--                                 <div>
-                                    <input type="hidden" value="<?php  //echo $line_master[$i]->line_name; ?>" name="line_name[]"/>
-                                </div> -->
+                                <div>
+                                    <input type="hidden" value="<?php  echo $line_master[$i]->line_name; ?>" name="line_name[]"/>
+                                </div>
                             <?
                             $i++;
                             }
