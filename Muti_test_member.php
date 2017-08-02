@@ -76,11 +76,11 @@
                                         <div class="checkbox">
                                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
                                                 <?php
-                                                echo $line_member[$i]->line_master_id;
+                                                echo $line_member[$j]->line_master_id;
                                                 echo "    ";
-                                                echo $line_member[$i]->id;
+                                                echo $line_member[$j]->id;
                                                 echo "    ";
-                                                echo $line_member[$i]->member_name;
+                                                echo $line_member[$j]->member_name;
                                                 ?>
                                                 </label><br>
                                         </div>
