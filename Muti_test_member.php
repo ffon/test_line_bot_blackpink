@@ -78,7 +78,7 @@
                                                 //if($line_member[$i]->line_master_id == $line_master[$j]->id){
                                                     echo $line_member[$i]->line_master_id;
                                                     echo "     ";
-                                                    //echo $line_master[$i]->id;
+                                                    echo $line_master[$i]->id;
                                                     echo "     ";
                                                     //echo $line_master[$i]->line_name;
                                                     echo "     ";
