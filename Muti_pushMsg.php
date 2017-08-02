@@ -16,13 +16,13 @@ foreach ($mids as $key => $mid) {
     "to" => $mid,
     "messages" => [$messages]
     ];
-    for($token as $key => $tokens){
+   
         
         $header = array(
         'Content-Type: application/json',
-        'Authorization: Bearer ' . $tokens
+        'Authorization: Bearer ' . $token
         );
-    }
+    
     $url = 'https://api.line.me/v2/bot/message/push';
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_POST, true);
