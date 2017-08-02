@@ -101,7 +101,7 @@
                                 if ($id[$j]==$line_master[$i]->id) {
                                      $token[$j] = array("$id[$j]" => $line_master[$i]->access_token);
                                     ?>
-                                    <input type="hidden" value="<?$token?>" name="token[]"/>
+                                    <input type="hidden" value="<?$token[$j]?>" name="token[]"/>
                                     <?php
                                 }
                             }
