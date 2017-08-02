@@ -48,13 +48,17 @@
                     <div class="form-group">
                         <div class="container">
                             <h2>Line Member </h2>
+                            <label>(Line@) Member name</label>
                             <?php 
                             for ($i=0;$i<$count;$i++) {
                                 if ($id==$line_member[$i]->line_master_id) {?>
                                 <div class="checkbox">
                                         <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
-                                      <?php echo $line_member[$i]->id;
-                                            echo " ";
+                                      <?php 
+                                            echo "("; 
+                                            echo $line_member[$i]->created_user;
+                                            echo ")";                                
+                                            echo "     ";
                                             echo $line_member[$i]->member_name; ?>
                                        </label><br>
                                 </div>
