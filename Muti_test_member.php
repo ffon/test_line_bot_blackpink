@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-166
+1
 <br>
 <head>
     <title>Push Messages</title>
@@ -72,15 +72,15 @@
                                 for ($j=0; $j<$count_id; $j++) {
                                     if ($id[$j] == $line_member[$i]->line_master_id) {?>
                                         <div class="checkbox">
+                                            <label>(Line@) Member name</label>
                                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
                                                 <?php
                                                 //if($line_member[$i]->line_master_id == $line_master[$j]->id){
                                                     
-                                                    echo "( Line@ : ";
-                                                    //echo $line_member[$i]->line_master_id;
+                                                    echo "(";
                                                     echo $line_member[$i]->created_user;
                                                     echo ")";
-                                                    echo "Member name : ";
+                                                    echo "     ";
                                                     echo $line_member[$i]->member_name;
                                                 //}
                                                                                                    
