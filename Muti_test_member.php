@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-112
+1
 <br>
 <head>
     <title>Push Messages</title>
@@ -78,7 +78,7 @@
                                     ?>
 
                                         <div class="checkbox">
-                                                <label><input type="checkbox" value="<?php print_r($mid[$j]); ?>" name="mid[]"> 
+                                                <label><input type="checkbox" value="<?php print_r($id[$j]); ?>" name="mid[]"> 
                                                 <?php
                                                     echo "(";
                                                     echo $line_member[$i]->created_user;
