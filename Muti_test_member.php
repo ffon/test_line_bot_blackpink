@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-12
+122
 <br>
 <head>
     <title>Push Messages</title>
@@ -77,13 +77,13 @@
                                                 <?php
                                                 //if($line_member[$i]->line_master_id == $line_master[$j]->id){
                                                     $line_member[$i]->line_master_id;
-                                                    echo "  ";
-                                                    //$line_master[$i]->id;
-                                                    echo "  ";
+                                                    echo "     ";
+                                                    $line_master[$i]->id;
+                                                    echo "     ";
                                                     //echo $line_master[$i]->line_name;
-                                                    echo "  ";
+                                                    echo "     ";
                                                     echo $line_member[$i]->id;
-                                                    echo "  ";
+                                                    echo "     ";
                                                     echo $line_member[$i]->member_name;
                                                 //}
                                                                                                    
