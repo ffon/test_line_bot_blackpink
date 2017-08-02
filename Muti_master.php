@@ -49,17 +49,10 @@
                                 <div class="checkbox">
                                     <label><input type="checkbox" value="<?php echo $line_master[$i]->id; ?>" name="id[]"> 
                                         <?php $id = $line_master[$i]->id; echo $id;
-                                            echo " ";
+                                            echo "    ";
                                             echo $line_master[$i]->line_name; 
                                         ?>
                                     </label><br>
-                                    <?php while($j!=$count){
-                                        if($line_master[$i]->id == $line_master[$j]->id){ ?>
-                                            <input type="hidden" value="<?php  echo $line_master[$i]->line_name; ?>" name="line_name[]">
-                                        <?}
-                                        $j++;
-                                    }?>
-                                    
                                 </div>
                                 
                             <?
