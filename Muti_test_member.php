@@ -20,17 +20,11 @@
 <body>
     <?php
         $id = $_GET['id'];
-        $line_name = $_GET['line_name'];
         echo "id";
         echo "<br>";
         var_dump($id);
         echo "<br>";
-    
-        echo "line_name";
-        echo "<br>";
-        var_dump($line_name);
-        echo "<br>";
-        
+ 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_member');
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -86,7 +80,7 @@
                                                     //echo $line_member[$i]->line_master_id;
                                                     echo $line_member[$i]->created_user;
                                                     echo ")";
-                                                    echo "     ";
+                                                    echo "Member name : ";
                                                     echo $line_member[$i]->member_name;
                                                 //}
                                                                                                    
