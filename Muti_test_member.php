@@ -19,9 +19,8 @@
 
 <body>
     <?php
-
         $id = $_GET['id'];
-        $line_name = $_GET['line_name']; 
+        //$line_name = $_GET['line_name'];
         echo "id";
         echo "<br>";
         var_dump($id);
@@ -49,6 +48,24 @@
                     <h1 align="center">Push Massages</h1>
                 </div>
 
+                    <?php
+                        $ch = curl_init();
+                        curl_setopt($ch, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_master');
+                        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                        "Content-Type: application/json",
+                                                )
+                        );
+                        $result = curl_exec($ch);
+                        $err    = curl_error($ch);
+                        curl_close($ch);
+                        $line_master = json_decode($result);
+                        $count = count($line_master);
+                        
+                        $count_id=count($id);
+                    ?>
+
                 <form method="GET" action="Muti_pushMsg.php">
                     <div class="form-group">
                         <div class="container">
@@ -59,8 +76,8 @@
                                     if ($id[$j] == $line_member[$i]->line_master_id) {?>
                                         <div class="checkbox">
                                                 <label><input type="checkbox" value="<?php echo $line_member[$i]->user_id; ?>" name="mid[]"> 
-                                                <?php                                
-                                                echo $line_name[$i];
+                                                <?php
+                                                echo $line_master[$i]->line_name;
                                                 echo " ";
                                                 echo $line_member[$i]->id;
                                                 echo " ";
@@ -78,24 +95,6 @@
                             <label>Text</label>
                             <textarea class="form-control" rows="5" id="textArea" name="text"></textarea><br>
                         </div>
-
-                        <?php
-                            $ch = curl_init();
-                            curl_setopt($ch, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_master');
-                            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                            "Content-Type: application/json",
-                                                    )
-                            );
-                            $result = curl_exec($ch);
-                            $err    = curl_error($ch);
-                            curl_close($ch);
-                            $line_master = json_decode($result);
-                            $count = count($line_master);
-                          
-                            $count_id=count($id);
-                        ?>
 
                         <div align="center">
                         <?php
