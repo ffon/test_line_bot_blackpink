@@ -86,7 +86,7 @@
                                                     echo ")";
                                                     //echo $line_master[$i]->id;
                                                     echo "(";
-                                                    echo $line_master[$i]->line_name;
+                                                    echo $line_member[$i]->created_user;
                                                     echo ")";
                                                     echo "     ";
                                                     echo $line_member[$i]->member_name;
