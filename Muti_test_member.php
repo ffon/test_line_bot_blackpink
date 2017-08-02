@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-14
+15
 <br>
 <head>
     <title>Push Messages</title>
@@ -84,7 +84,7 @@
                                                     echo "(";
                                                     echo $line_member[$i]->line_master_id;
                                                     echo ")";
-                                                    echo $line_master[$i]->id;
+                                                    //echo $line_master[$i]->id;
                                                     echo "     ";
                                                     //echo $line_master[$i]->line_name;
                                                     echo "     ";
