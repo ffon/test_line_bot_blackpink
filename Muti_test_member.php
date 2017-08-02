@@ -73,7 +73,7 @@
                                 for ($j=0; $j<$count_id; $j++) {
                                     if ($id[$j] == $line_member[$i]->line_master_id) {
                                         //$mid[$id[$j]] = array($j => array($line_member[$i]->user_id));
-                                        $mid[$j] = array($id[$j] => array($line_member[$i]->user_id));
+                                        $mid[$id] = array($id[$j] => array($j => $line_member[$i]->user_id));
                                         //$mid[$id[$j]] = array($j => array($line_member[$i]->user_id));
 
                                     ?>
