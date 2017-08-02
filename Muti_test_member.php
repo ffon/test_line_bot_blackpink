@@ -25,6 +25,11 @@
         echo "<br>";
         var_dump($id);
         echo "<br>";
+    
+        echo "line_name";
+        echo "<br>";
+        var_dump($line_name);
+        echo "<br>";
         
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_member');
