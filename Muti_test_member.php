@@ -79,7 +79,7 @@
                                     ?>
 
                                         <div class="checkbox">
-                                                <label><input type="checkbox" value="<?php print_r($mid); ?>" name="mid[]"> 
+                                                <label><input type="checkbox" value="<?php var_dump($mid); ?>" name="mid[]"> 
                                                 <?php
                                                     echo "(";
                                                     echo $line_member[$i]->created_user;
