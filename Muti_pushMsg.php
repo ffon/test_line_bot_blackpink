@@ -23,14 +23,15 @@
 //     var_dump($text);
 //     echo "<br>";
 
-foreach($token as $key=>$token1){
-    echo $key;echo "<br>";
-    echo $token1;echo "<br>";
-    foreach($token1 as $keys=>$token2){
-        echo $keys;echo "<br>";
-        echo $token2;
-   }
-}
+print_r(array_keys($token[0][1]));
+// foreach($token as $key=>$token1){
+//     echo $key;echo "<br>";
+//     echo $token1;echo "<br>";
+//     foreach($token1 as $keys=>$token2){
+//         echo $keys;echo "<br>";
+//         echo $token2;
+//    }
+// }
 
    
     
