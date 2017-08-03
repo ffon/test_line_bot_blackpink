@@ -4,7 +4,7 @@
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-    echo "33";
+    echo "34";
 
 //     echo "result ";
 //     echo "<br>";
