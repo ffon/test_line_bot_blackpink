@@ -107,8 +107,9 @@
                             for ($j=0; $j<$count_id; $j++) {
                                 if ($id[$j]==$line_master[$i]->id) {
                                      $token[$j] = array($id[$j] => $line_master[$i]->access_token);
+                                     //$token_en=urlencode($token[$j]);
                                     ?>
-                                    <input type="hidden" value="<? print_r($token[$j])?>" name="token[]"/>
+                                    <input type="hidden" value="<? echo urlencode($token); //print_r($token[$j])?>" name="token[]"/>
                                     <?php
                                 }
                             }
