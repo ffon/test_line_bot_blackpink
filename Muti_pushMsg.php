@@ -4,24 +4,24 @@
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-    echo "3";
+    echo "1";
 
-    echo "result ";
-    echo "<br>";
-    var_dump($result);
-    echo "<br>"; 
+//     echo "result ";
+//     echo "<br>";
+//     var_dump($result);
+//     echo "<br>"; 
     echo "token";
     echo "<br>";
     var_dump($token);
     echo "<br>";
-    echo "mid";
-    echo "<br>";
-    var_dump($mid);
-    echo "<br>";
-    echo "text";
-    echo "<br>";
-    var_dump($text);
-    echo "<br>";
+//     echo "mid";
+//     echo "<br>";
+//     var_dump($mid);
+//     echo "<br>";
+//     echo "text";
+//     echo "<br>";
+//     var_dump($text);
+//     echo "<br>";
 
 foreach($token as $key=>$token1){
     echo $key;echo "<br>";
@@ -29,8 +29,8 @@ foreach($token as $key=>$token1){
 }
 
    foreach($token1 as $keys=>$token2){
-        var_dump($keys);echo "<br>";
-        var_dump($token2);
+        echo $keys;echo "<br>";
+        echo $token2;
    }
     
 
