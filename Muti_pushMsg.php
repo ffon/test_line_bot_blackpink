@@ -26,12 +26,13 @@
 foreach($token as $key=>$token1){
     echo $key;echo "<br>";
     echo $token1;echo "<br>";
-}
-
-   foreach($token1 as $keys=>$token2){
+    foreach($token1 as $keys=>$token2){
         echo $keys;echo "<br>";
         echo $token2;
    }
+}
+
+   
     
 
     
