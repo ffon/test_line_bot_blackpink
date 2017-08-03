@@ -5,26 +5,20 @@
     $text = $_GET['text'];
     
     $token_de = json_decode($token);
-    echo "23"; echo "<br>";
+    echo "21"; echo "<br>";
 
-//     echo "result ";
-//     echo "<br>";
-//     var_dump($result);
-//     echo "<br>"; 
     echo "token";echo "<br>";
     var_dump($token);echo "<br>";
 
     echo "token_de";echo "<br>";
     var_dump($token_de);echo "<br>";
-     //   echo "<br>";
-//     echo "mid";
-//     echo "<br>";
-//     var_dump($mid);
-//     echo "<br>";
-//     echo "text";
-//     echo "<br>";
-//     var_dump($text);
-//      echo "<br>";
+
+    echo "mid";echo "<br>";
+    var_dump($mid);echo "<br>";
+    echo "text"; echo "<br>";
+   
+    var_dump($text); echo "<br>";
+    
 
 
 
