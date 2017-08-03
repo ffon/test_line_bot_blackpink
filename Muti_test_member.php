@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-18
+181
 <br>
 <head>
     <title>Push Messages</title>
@@ -111,13 +111,12 @@
                                      $token_de = json_decode($token_en);
 
                                     ?>
-                                    <input type="hidden" value="<? echo $token_en; ?>" name="token[]"/>
+                                    <input type="hidden" value="<? var_dump($token_en); ?>" name="token[]"/>
                                     <?php
                                 }
                             }
                         }
-        
-                            
+
                             echo "token"; echo "<br>";
                             var_dump($token);echo "<br>";
                             
