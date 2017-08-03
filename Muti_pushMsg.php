@@ -15,19 +15,19 @@
     var_dump($token);
     echo "<br>";
 //     echo "mid";
-//     echo "<br>";
+     echo "<br>";
 //     var_dump($mid);
-//     echo "<br>";
+     echo "<br>";
 //     echo "text";
-//     echo "<br>";
+     echo "<br>";
 //     var_dump($text);
-//     echo "<br>";
+     echo "<br>";
 
 
 foreach($token as $key=>$token1){
     echo $key;echo "<br>";
     echo $token1;echo "<br>";
-    for($token1 as $tokens){
+    foreach($token1 as $tokens){
         print_r(array_keys($tokens));
     }
     
