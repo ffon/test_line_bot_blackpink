@@ -109,7 +109,7 @@
                                      $token[$j] = array($id[$j] => $line_master[$i]->access_token);
                                      $token_en = json_encode($token);
                                     ?>
-                                    <input type="hidden" value="<? print_r($token_en);?>" name="token[]"/>
+                                    <input type="hidden" value="<? echo $token_en;?>" name="token[]"/>
                                     <?php
                                 }
                             }
