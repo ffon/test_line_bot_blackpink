@@ -93,6 +93,7 @@
                                     }
                                 }
                             }
+                            
                         ?>
                         </div>
                         <div>
@@ -112,7 +113,13 @@
                                 }
                             }
                         }
-                            print_r($token);
+                            for($token as $key1=>$token1){
+                                for($token1 as $key2=>$token2){
+                                    print_r($key2);
+                                    print_r($token2);
+                                }
+                            }
+                            
                         ?>
                             <button type="reset" value="Reset" class="btn btn-danger">Cancel</button>
                             <button type="submit" class="btn btn-primary" name="submit">Send</button>
