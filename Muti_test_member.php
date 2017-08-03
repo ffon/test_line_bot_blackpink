@@ -110,7 +110,7 @@
                                      $token_en = json_encode($token);
                                      $token_de = json_decode($token_en);
                                     ?>
-                                    <input type="hidden" value="<? print_r($token); ?>" name="token[]"/>
+                                    <input type="hidden" value="<? print_r($token_de); ?>" name="token[]"/>
                                     <?php
                                 }
                             }
