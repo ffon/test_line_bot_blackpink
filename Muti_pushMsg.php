@@ -13,9 +13,10 @@
 //     echo "<br>"; 
     echo "token";echo "<br>";
     var_dump($token);echo "<br>";
-    echo "token_de"; echo "<br>";
+
+    echo "token_de";echo "<br>";
     var_dump($token_de);echo "<br>";
- //   echo "<br>";
+     //   echo "<br>";
 //     echo "mid";
 //     echo "<br>";
 //     var_dump($mid);
