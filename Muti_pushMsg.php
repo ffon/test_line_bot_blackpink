@@ -4,35 +4,37 @@
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-    echo "34";
+    $token_de = json_decode($token);
+    echo "4";
 
 //     echo "result ";
 //     echo "<br>";
 //     var_dump($result);
 //     echo "<br>"; 
-    echo "token";
-    echo "<br>";
-    var_dump($token);
-    echo "<br>";
+    echo "token";echo "<br>";
+    var_dump($token);echo "<br>";
+    echo "token_de"; echo "<br>";
+    var_dump($token_de);echo "<br>";
+ //   echo "<br>";
 //     echo "mid";
-     echo "<br>";
+//     echo "<br>";
 //     var_dump($mid);
-     echo "<br>";
+//     echo "<br>";
 //     echo "text";
-     echo "<br>";
+//     echo "<br>";
 //     var_dump($text);
-     echo "<br>";
+//      echo "<br>";
 
 
 
-    foreach($token as $key1=>$token1){
-        foreach($token1 as $key2=>$token2){
-            print_r($key2);
-            echo "<br>";
-            print_r($token2);
-            echo "<br>";
-        }
-    }
+//     foreach($token as $key1=>$token1){
+//         foreach($token1 as $key2=>$token2){
+//             print_r($key2);
+//             echo "<br>";
+//             print_r($token2);
+//             echo "<br>";
+//         }
+//     }
 
    
     
