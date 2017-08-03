@@ -4,11 +4,15 @@
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-    $token_de = json_decode($token);
-    echo "21"; echo "<br>";
+    $token_en = json_encode($token);
+    $token_de = json_decode($token_en);
+    echo "22"; echo "<br>";
 
     echo "token";echo "<br>";
     var_dump($token);echo "<br>";
+
+    echo "token en";echo "<br>";
+    var_dump($token_en);echo "<br>";
 
     echo "token_de";echo "<br>";
     var_dump($token_de);echo "<br>";
