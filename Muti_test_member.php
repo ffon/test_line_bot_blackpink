@@ -105,9 +105,9 @@
                         for ($i=0; $i<$count_master; $i++) {
                             for ($j=0; $j<$count_id; $j++) {
                                 if ($id[$j]==$line_master[$i]->id) {
-                                     $token = array($id[$j] => $line_master[$i]->access_token);
+                                     $token[$j] = array($id[$j] => $line_master[$i]->access_token);
                                     ?>
-                                    <input type="hidden" value="<? print_r($token)?>" name="token[]"/>
+                                    <input type="hidden" value="<? print_r($token[$j])?>" name="token[]"/>
                                     <?php
                                 }
                             }
