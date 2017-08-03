@@ -4,7 +4,7 @@
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-    echo "2";
+    echo "3";
 
     echo "result ";
     echo "<br>";
@@ -26,12 +26,12 @@
 foreach($token as $key=>$token1){
     echo $key;echo "<br>";
     echo $token1;echo "<br>";
-//    foreach($token1 as $keys=>$token2){
-//         var_dump($keys);echo "<br>";
-//         var_dump($token2);
-//    }
-   
 }
+
+   foreach($token1 as $keys=>$token2){
+        var_dump($keys);echo "<br>";
+        var_dump($token2);
+   }
     
 
     
