@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-1213
+12
 <br>
 <head>
     <title>Push Messages</title>
@@ -114,7 +114,7 @@
                                 }
                             }
                         }
-                            $token = json_decode($token_en);
+                            $token_de = json_decode($token_en);
                             echo "token"; echo "<br>";
                             var_dump($token);echo "<br>";
                             
