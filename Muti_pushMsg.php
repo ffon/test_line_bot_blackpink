@@ -19,13 +19,13 @@
     echo "<br>";
     var_dump($text);
     echo "<br>";
-foreach($token as $key => $tokens){
-   echo $key;echo "<br>";
-}echo "<br>";
-
-// foreach($mid as $key => $mids){
-//     var_dump($mids);
-// }
+foreach($token as $key=>$token1){
+   foreach($token1 as $keys=>$token2){
+        echo $keys;
+   }
+   
+}
+    
 
     
 // foreach(token as $key => $tokens){
