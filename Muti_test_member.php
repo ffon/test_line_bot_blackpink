@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-88
+8
 <br>
 <head>
     <title>Push Messages</title>
@@ -145,24 +145,7 @@
                 </form>
             </div>
         </div>
-    <?php 
-//     $token = $_GET['token'];
-//     $mid = $_GET['mid'];
-//     $text = $GET['text'];
-    
-//     var_dump($token);
-//     var_dump($mid);
-//     var_dump($text);
-    
-//     foreach($token as $key=> $token1){
-//         foreach($token2 as $key2=>$tokens){
-//             echo $key2; echo "<br>";
-//             echo $tokens; echo "<br>";
-//         }
-        
-//     }
-    
-    ?>
+
 </body>
 
 </html>
