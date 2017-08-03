@@ -6,7 +6,7 @@
     echo "result ";
     echo "<br>";
     var_dump($result);
-    echo "<br>";
+    echo "<br>"; 
     echo "token";
     echo "<br>";
     var_dump($token);
@@ -19,6 +19,11 @@
     echo "<br>";
     var_dump($text);
     echo "<br>";
+foreach($token as $key => $tokens){
+   var_dump($key);
+}
+    
+
     
 // foreach(token as $key => $tokens){
 // foreach ($mids as $key => $mid) {
