@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-1111
+1010
 <br>
 <head>
     <title>Push Messages</title>
@@ -74,7 +74,7 @@
                                     if ($id[$j] == $line_member[$i]->line_master_id) {
                                         //$mid[$id[$j]] = array($j => array($line_member[$i]->user_id));
                                         //$mid[$j] = array($id[$j] => array($line_member[$i]->user_id));
-                                        $mid[$id[$j]] = array($id[$j] => array($line_member[$i]->user_id));
+                                        $mid[$id[$j]] = array($id[$j] => $line_member[$i]->user_id);
 
                                     ?>
 
