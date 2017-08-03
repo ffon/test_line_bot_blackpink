@@ -5,8 +5,8 @@
     $text = $_GET['text'];
     
     $token_en = json_encode($token);
-    $token_de = json_decode($token_en);
-    echo "22"; echo "<br>";
+    $token_de = json_decode($token);
+    echo "21"; echo "<br>";
 
     echo "token";echo "<br>";
     var_dump($token);echo "<br>";
