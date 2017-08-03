@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-14
+1514
 <br>
 <head>
     <title>Push Messages</title>
@@ -79,7 +79,7 @@
                                     ?>
 
                                         <div class="checkbox">
-                                                <label><input type="checkbox" value="<?php echo "5555"; ?>" name="mid[]"> 
+                                                <label><input type="checkbox" value="<?php print_r($mid[$j]); ?>" name="mid[]"> 
                                                 <?php
                                                     echo "(";
                                                     echo $line_member[$i]->created_user;
@@ -109,7 +109,7 @@
                                      $token[$j] = array($id[$j] => $line_master[$i]->access_token);
 
                                     ?>
-                                    <input type="hidden" value="<? echo $token[$j]; ?>" name="token[]"/>
+                                    <input type="hidden" value="<? print_r($token[$j]); ?>" name="token[]"/>
                                     <?php
                                 }
                             }
