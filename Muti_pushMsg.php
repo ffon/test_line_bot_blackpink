@@ -1,8 +1,11 @@
 <?php
+    
     $token = $_GET['token'];
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
+    echo "1";
+
     echo "result ";
     echo "<br>";
     var_dump($result);
@@ -19,9 +22,12 @@
     echo "<br>";
     var_dump($text);
     echo "<br>";
+
 foreach($token as $key=>$token1){
+    echo $key;
    foreach($token1 as $keys=>$token2){
-        echo $keys;
+        var_dump($keys);echo "<br>";
+        var_dump($token2);
    }
    
 }
