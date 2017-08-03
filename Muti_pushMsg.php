@@ -4,7 +4,7 @@
     $mid = $_GET['mid'];
     $text = $_GET['text'];
     
-    echo "1";
+    echo "33";
 
 //     echo "result ";
 //     echo "<br>";
@@ -25,9 +25,13 @@
 
 
 foreach($token as $key=>$token1){
-//     echo $key;echo "<br>";
+    echo $key;echo "<br>";
+    foreach($token1 as $key2=>$token2){
+        print_r($key2);
+        print_r($token2);
+    }
 //     echo $token1;echo "<br>";
-   print_r(array_keys($token1));
+//    print_r(array_keys($token1[0],''));
     //print_r($token1);
 }
 
