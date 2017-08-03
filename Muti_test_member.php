@@ -74,12 +74,12 @@
                                     if ($id[$j] == $line_member[$i]->line_master_id) {
                                         //$mid[$id[$j]] = array($j => array($line_member[$i]->user_id));
                                         //$mid[$j] = array($id => array($line_member[$i]->user_id));
-                                        $mid[$id] = array($id => $line_member[$i]->user_id);
+                                        $mid[$j] = array($id => array($j => $line_member[$i]->user_id));
 
                                     ?>
 
                                         <div class="checkbox">
-                                                <label><input type="checkbox" value="<?php print_r($mid[$id]); ?>" name="mid[]"> 
+                                                <label><input type="checkbox" value="<?php print_r($mid[$j]); ?>" name="mid[]"> 
                                                 <?php
                                                     echo "(";
                                                     echo $line_member[$i]->created_user;
