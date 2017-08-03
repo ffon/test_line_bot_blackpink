@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-10
+11
 <br>
 <head>
     <title>Push Messages</title>
@@ -107,24 +107,30 @@
                             for ($j=0; $j<$count_id; $j++) {
                                 if ($id[$j]==$line_master[$i]->id) {
                                      $token[$j] = array($id[$j] => $line_master[$i]->access_token);
-                                     $token_en = urlencode($token);
+                                     $token_en = json_encode($token);
                                     ?>
                                     <input type="hidden" value="<? echo $token_en; //print_r($token[$j])?>" name="token[]"/>
                                     <?php
                                 }
                             }
                         }
-                            var_dump($token_en);
+                            echo "token"; echo "<br>";
+                            var_dump($token);echo "<br>";
                             
-                            echo "<br>";
-                            foreach($token as $key1=>$token1){
-                                foreach($token1 as $key2=>$token2){
-                                    print_r($key2);
-                                    echo "<br>";
-                                    print_r($token2);
-                                    echo "<br>";
-                                }
-                            }
+                            echo "token_en";echo "<br>";
+                            var_dump($token_en);echo "<br>";
+                            
+                               
+                            
+//                             echo "<br>";
+//                             foreach($token as $key1=>$token1){
+//                                 foreach($token1 as $key2=>$token2){
+//                                     print_r($key2);
+//                                     echo "<br>";
+//                                     print_r($token2);
+//                                     echo "<br>";
+//                                 }
+//                             }
                             
                         ?>
                             <button type="reset" value="Reset" class="btn btn-danger">Cancel</button>
