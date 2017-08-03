@@ -113,8 +113,8 @@
                                 }
                             }
                         }
-                            for($token as $key1=>$token1){
-                                for($token1 as $key2=>$token2){
+                            foreach($token as $key1=>$token1){
+                                foreach($token1 as $key2=>$token2){
                                     print_r($key2);
                                     print_r($token2);
                                 }
