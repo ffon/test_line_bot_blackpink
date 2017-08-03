@@ -5,7 +5,7 @@
     $text = $_GET['text'];
     
     $token_de = json_decode($token);
-    echo "4";
+    echo "23"; echo "<br>";
 
 //     echo "result ";
 //     echo "<br>";
