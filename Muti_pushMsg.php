@@ -20,7 +20,7 @@
     var_dump($text);
     echo "<br>";
 foreach($token as $key => $tokens){
-   var_dump($key);
+   var_dump($tokens);
 }
     
 
