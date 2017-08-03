@@ -74,7 +74,7 @@
                                     if ($id[$j] == $line_member[$i]->line_master_id) {
                                         //$mid[$id[$j]] = array($j => array($line_member[$i]->user_id));
                                         //$mid[$j] = array($id => array($line_member[$i]->user_id));
-                                        $mid = array($id => $line_member[$i]->user_id));
+                                        $mid = array($id => $line_member[$i]->user_id);
 
                                     ?>
 
