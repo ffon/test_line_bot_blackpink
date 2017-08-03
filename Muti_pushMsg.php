@@ -27,10 +27,8 @@
 foreach($token as $key=>$token1){
     echo $key;echo "<br>";
     echo $token1;echo "<br>";
-    foreach($token1 as $tokens){
-        print_r(array_keys($tokens));
-    }
-    
+    print_r(array_keys($token1['0'],'7uCUqHp4ZPaCraRiNL+FYnbgH7KSzEME+hIEZvOf0sxRyEuEjQ9O32liOHwmLUFmcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQqHfRVdzDJv4ZBpSy4ql5bt3COy1hmKkVdRlDo1swsePgdB04t89/1O/w1cDnyilFU='));
+
 }
 
    
