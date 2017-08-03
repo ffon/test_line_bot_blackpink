@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-1412
+14
 <br>
 <head>
     <title>Push Messages</title>
@@ -107,14 +107,15 @@
                             for ($j=0; $j<$count_id; $j++) {
                                 if ($id[$j]==$line_master[$i]->id) {
                                      $token[$j] = array($id[$j] => $line_master[$i]->access_token);
-                                     $token_en = json_encode($token);
-                                     $token_de = json_decode($token_en);
+
                                     ?>
-                                    <input type="hidden" value="<? print_r($token_de); ?>" name="token[]"/>
+                                    <input type="hidden" value="<? echo $token[$j]; ?>" name="token[]"/>
                                     <?php
                                 }
                             }
                         }
+                            $token_en = json_encode($token);
+                            $token_de = json_decode($token_en);
                             
                             echo "token"; echo "<br>";
                             var_dump($token);echo "<br>";
