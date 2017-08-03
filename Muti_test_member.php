@@ -112,6 +112,7 @@
                                 }
                             }
                         }
+                            print_r($token);
                         ?>
                             <button type="reset" value="Reset" class="btn btn-danger">Cancel</button>
                             <button type="submit" class="btn btn-primary" name="submit">Send</button>
