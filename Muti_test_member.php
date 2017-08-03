@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-1111
+110
 <br>
 <head>
     <title>Push Messages</title>
@@ -113,6 +113,8 @@
                                 }
                             }
                         }
+                            var_dump($token);
+                            echo "<br>";
                             foreach($token as $key1=>$token1){
                                 foreach($token1 as $key2=>$token2){
                                     print_r($key2);
