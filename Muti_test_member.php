@@ -122,10 +122,10 @@
                             
                             echo "token_en";echo "<br>";
                             print_r($token_en);echo "<br>";
-                            var_dump($token_en);echo "<br>";
+                            //var_dump($token_en);echo "<br>";
                             
-//                             echo "token_de";echo "<br>";
-//                             var_dump($token_de);echo "<br>";
+                            echo "token_de";echo "<br>";
+                            var_dump($token_de);echo "<br>";
                   
 //                             echo "<br>";
 //                             foreach($token as $key1=>$token1){
