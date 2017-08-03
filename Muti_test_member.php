@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-9
+88
 <br>
 <head>
     <title>Push Messages</title>
@@ -63,7 +63,7 @@
                    // $count_id=count($id);
                     ?>
 
-                <form method="GET" action="Muti_pushMsg.php">
+                <form method="GET" >
                     <div class="form-group">
                         <div class="container">
                             <h2>Line Member </h2>
@@ -145,6 +145,16 @@
                 </form>
             </div>
         </div>
+    <?php 
+    $token = $_GET['token'];
+    $mid = $_GET['mid'];
+    $text = $GET['text'];
+    
+    var_dump($token);
+    var_dump($mid);
+    var_dump($text);
+    
+    ?>
 </body>
 
 </html>
