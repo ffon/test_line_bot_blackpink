@@ -20,11 +20,12 @@
     var_dump($text);
     echo "<br>";
 foreach($token as $key => $tokens){
-   var_dump($tokens);
+   echo $key;echo "<br>";
 }echo "<br>";
-foreach($mid as $key => $mids){
-    var_dump($mids);
-}
+
+// foreach($mid as $key => $mids){
+//     var_dump($mids);
+// }
 
     
 // foreach(token as $key => $tokens){
