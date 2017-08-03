@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-856
+85
 <br>
 <head>
     <title>Push Messages</title>
@@ -117,25 +117,25 @@
                             }
                         }
 
-                            echo "token"; echo "<br>";
-                            var_dump($token);echo "<br>";
+                            // echo "token"; echo "<br>";
+                            // var_dump($token);echo "<br>";
                             
-                            echo "token_en";echo "<br>";
-                            print_r($token_en);echo "<br>";
-                            //var_dump($token_en);echo "<br>";
+                            // echo "token_en";echo "<br>";
+                            // print_r($token_en);echo "<br>";
+                            // //var_dump($token_en);echo "<br>";
                             
-                            echo "token_de";echo "<br>";
-                            var_dump($token_de);echo "<br>";
+                            // echo "token_de";echo "<br>";
+                            // var_dump($token_de);echo "<br>";
                   
-                            echo "<br>";
-                            foreach($token as $key1=>$token1){
-                                foreach($token1 as $key2=>$token2){
-                                    print_r($key2);
-                                    echo "<br>";
-                                    print_r($token2);
-                                    echo "<br>";
-                                }
-                            }
+                            // echo "<br>";
+                            // foreach($token as $key1=>$token1){
+                            //     foreach($token1 as $key2=>$token2){
+                            //         print_r($key2);
+                            //         echo "<br>";
+                            //         print_r($token2);
+                            //         echo "<br>";
+                            //     }
+                            // }
                             
                         ?>
                             <button type="reset" value="Reset" class="btn btn-danger">Cancel</button>
