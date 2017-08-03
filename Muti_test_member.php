@@ -117,8 +117,8 @@
                             }
                         }
 
-//                             echo "token"; echo "<br>";
-//                             var_dump($token);echo "<br>";
+                            echo "token"; echo "<br>";
+                            var_dump($token);echo "<br>";
                             
                             echo "token_en";echo "<br>";
                             print_r($token_en);echo "<br>";
