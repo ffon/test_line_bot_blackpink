@@ -31,7 +31,7 @@
             // echo "<br>";
             // echo $mid;
             // echo "<br>";
-            foreach($mid as $key_value => $mid_value){
+            //foreach($mid as $key_value => $mid_value){
                 // echo $key_value;
                 // echo "<br>";
                 // echo $mid_value;
@@ -48,7 +48,7 @@
 
                 }
 
-            }
+           // }
         }
 
    }
