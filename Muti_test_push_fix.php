@@ -9,7 +9,7 @@
     $mids = array('1'=>array('U7de80d0a2ceea863e831375badd2eb55','Ub5fea2ff169cba24b2179fd33e59e454'),
                   '2'=>array('U7de80d0a2ceea863e831375badd2eb55'),
                   '4'=>array('U7de80d0a2ceea863e831375badd2eb55'));
-    $text = '123';
+    $text = 'test';
 
     echo "token";
     echo "<br>";
