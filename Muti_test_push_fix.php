@@ -28,7 +28,10 @@
             echo $mid;
             echo "<br>";
             foreach($mid as $key_value => $mid_value){
-                echo 
+                echo $key_value;
+                echo "<br>";
+                echo $mid_value;
+                echo "<br>";
 
             }
         }
