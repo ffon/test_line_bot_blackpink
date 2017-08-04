@@ -18,25 +18,31 @@
     var_dump($text);echo "<br>";
 
     foreach($tokens as $key_token => $token){
-        echo "key token";
-        echo "<br>";
-        echo $key_token;
-        echo "<br>";
-        echo $token;
-        echo "<br>";
+        // echo "key token";
+        // echo "<br>";
+        // echo $key_token;
+        // echo "<br>";
+        // echo $token;
+        // echo "<br>";
         foreach($mids as $key_mid => $mid){
-            echo "key mid";
-            echo "<br>";
-            echo $key_mid;
-            echo "<br>";
+            // echo "key mid";
+            // echo "<br>";
+            // echo $key_mid;
+            // echo "<br>";
             // echo $mid;
             // echo "<br>";
             foreach($mid as $key_value => $mid_value){
-                echo $key_value;
-                echo "<br>";
-                echo $mid_value;
-                echo "<br>";
+                // echo $key_value;
+                // echo "<br>";
+                // echo $mid_value;
+                // echo "<br>";
                 if($key_token == $key_mid){
+                    echo "key token";
+                    echo "<br>";
+                    echo $key_token;
+                    echo "key mid";
+                    echo "<br>";
+                    echo $key_mid;
                     echo "key_token == key_mid";
                     echo "<br>";
 
