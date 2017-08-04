@@ -1,24 +1,13 @@
 <?php    
     
-    $token = $_GET['token'];
-    $mid = $_GET['mid'];
-    $text = $_GET['text'];
     
-    $token_en = json_encode($token);
-    $token_de = json_decode($token);
-    echo "21"; echo "<br>";
-    echo "token";echo "<br>";
-    var_dump($token);echo "<br>";
-    echo "token en";echo "<br>";
-    var_dump($token_en);echo "<br>";
-    echo "token_de";echo "<br>";
-    var_dump($token_de);echo "<br>";
-    echo "mid";echo "<br>";
-    var_dump($mid);echo "<br>";
-    echo "text"; echo "<br>";
-   
-    var_dump($text); echo "<br>";
+    $tokens = array('1'=>'4IBuBmV6FywcyJmUK34M8karKQx3d4ferATfOBddUE5lOKYK4hMX5nn6zHmY0xU435cWVjdmcsqIsDjlsWQNO2siGwPWEXtl7Y67lf2v0nEGIAfvuKDtBJZx4JUtwgb+PJWLcRN8TArRFMfNP3ZGKQdB04t89/1O/w1cDnyilFU=','2'=>'7uCUqHp4ZPaCraRiNL+FYnbgH7KSzEME+hIEZvOf0sxRyEuEjQ9O32liOHwmLUFmcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQqHfRVdzDJv4ZBpSy4ql5bt3COy1hmKkVdRlDo1swsePgdB04t89/1O/w1cDnyilFU=');
+    // $token = $tokens;
+    // $mid = $mids;
+    // $text = '123';
     
+    var_dump($token);
+
 //     foreach($token as $key1=>$token1){
 //         foreach($token1 as $key2=>$token2){
 //             print_r($key2);
