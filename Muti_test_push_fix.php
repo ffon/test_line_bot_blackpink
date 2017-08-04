@@ -8,14 +8,11 @@
     
     var_dump($tokens);
 
-//     foreach($token as $key1=>$token1){
-//         foreach($token1 as $key2=>$token2){
-//             print_r($key2);
-//             echo "<br>";
-//             print_r($token2);
-//             echo "<br>";
-//         }
-//     }
+    foreach($tokens as $key=>$token){
+        echo $key;
+        echo "<br>";
+        echo $token;
+    }
    
     
     
