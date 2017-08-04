@@ -39,10 +39,10 @@
                 if($key_token == $key_mid){
                     echo "key token";
                     echo "<br>";
-                    echo $key_token;
+                    echo $key_token;echo "<br>";
                     echo "key mid";
                     echo "<br>";
-                    echo $key_mid;
+                    echo $key_mid;echo "<br>";
                     echo "key_token == key_mid";
                     echo "<br>";
 
