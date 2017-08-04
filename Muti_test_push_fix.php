@@ -6,7 +6,7 @@
     // $mid = $mids;
     // $text = '123';
     
-    var_dump($token);
+    var_dump($tokens);
 
 //     foreach($token as $key1=>$token1){
 //         foreach($token1 as $key2=>$token2){
