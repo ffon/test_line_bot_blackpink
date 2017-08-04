@@ -15,12 +15,12 @@
         echo "<br>";
         echo $token;
         echo "<br>";
-        foreach($mids as $key_mid => $mid){
-            echo $key_mid;
-            echo "<br>";
-            echo $mid;
-            echo "<br>";
-        }
+        // foreach($mids as $key_mid => $mid){
+        //     echo $key_mid;
+        //     echo "<br>";
+        //     echo $mid;
+        //     echo "<br>";
+        // }
 
     }
    
