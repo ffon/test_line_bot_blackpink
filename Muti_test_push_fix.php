@@ -3,10 +3,12 @@
     echo "2";
     echo "<br>";
     $tokens = array('1' => 'bnPCz7RNBSZ2h/PbGjAPN1iaK4PIIF0MlLrar0iOFi5kpcjb8qGcQCQZngEAnsS2QPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcs7twRoZc+fC59BcRxhwPWlvmr/nXevWi7w1FWg4QoMBwdB04t89/1O/w1cDnyilFU=',
-                    '2' => 'S3VhGqoaXc1OFAxRsYPrIpcuqMXf7Zc9/b9fXM8iXf3EEAJAMIXtoZBlcrdScnb86qVYXGI80LOObJe1H9EaoK4ZfSiSHwpUrRgQxlREc/Y7ZKfNYCcmdBkE+GPik3HsrAnlLnjICCQtAZXij9VHzwdB04t89/1O/w1cDnyilFU=');
-                                //oil,ffon
-    $mids = array('1'=>array('Ub5fea2ff169cba24b2179fd33e59e454','U7de80d0a2ceea863e831375badd2eb55'),
-                  '2'=>array('U30e8563887497419674d43526fb4d878','U7de80d0a2ceea863e831375badd2eb55'));//ffon,code
+                    '2' => 'S3VhGqoaXc1OFAxRsYPrIpcuqMXf7Zc9/b9fXM8iXf3EEAJAMIXtoZBlcrdScnb86qVYXGI80LOObJe1H9EaoK4ZfSiSHwpUrRgQxlREc/Y7ZKfNYCcmdBkE+GPik3HsrAnlLnjICCQtAZXij9VHzwdB04t89/1O/w1cDnyilFU='
+                    '3' => '4IBuBmV6FywcyJmUK34M8karKQx3d4ferATfOBddUE5lOKYK4hMX5nn6zHmY0xU435cWVjdmcsqIsDjlsWQNO2siGwPWEXtl7Y67lf2v0nEGIAfvuKDtBJZx4JUtwgb+PJWLcRN8TArRFMfNP3ZGKQdB04t89/1O/w1cDnyilFU=');
+                                //ffon//ffon,code
+    $mids = array('1'=>array('U7de80d0a2ceea863e831375badd2eb55'),
+                  '2'=>array('U7de80d0a2ceea863e831375badd2eb55'),
+                  '3'=>array('U7de80d0a2ceea863e831375badd2eb55'));
     $text = '123';
 
     echo "token";
@@ -27,16 +29,16 @@
     foreach ($tokens as $key_token => $token) {
         foreach ($mids as $key_mid => $mid) {
             if ($key_token == $key_mid) {
-                echo "key token";
-                echo "<br>";
-                echo $key_token;
-                echo "<br>";
-                echo "key mid";
-                echo "<br>";
-                echo $key_mid;
-                echo "<br>";
-                echo "key_token == key_mid";
-                echo "<br>";
+                // echo "key token";
+                // echo "<br>";
+                // echo $key_token;
+                // echo "<br>";
+                // echo "key mid";
+                // echo "<br>";
+                // echo $key_mid;
+                // echo "<br>";
+                // echo "key_token == key_mid";
+                // echo "<br>";
                 foreach ($mid as $key_value => $mid_value) {
                     $messages = [
                     "type" => "text",
