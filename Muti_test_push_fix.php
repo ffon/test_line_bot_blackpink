@@ -7,9 +7,15 @@
     $mids = array('1'=>array('Ub5fea2ff169cba24b2179fd33e59e454','U7de80d0a2ceea863e831375badd2eb55'),
                   '2'=>array('U30e8563887497419674d43526fb4d878','U7de80d0a2ceea863e831375badd2eb55'));//ffon,code
     $text = '123';
-    var_dump($tokens);
-    var_dump($mids);
-    var_dump($text);
+
+    echo "token";echo "<br>";
+    var_dump($tokens);echo "<br>";
+
+    echo "mids";echo "<br>";
+    var_dump($mids);echo "<br>";
+
+    echo "text";echo "<br>";
+    var_dump($text);echo "<br>";
 
     foreach($tokens as $key_token => $token){
         echo $key_token;
@@ -21,6 +27,10 @@
             echo "<br>";
             echo $mid;
             echo "<br>";
+            foreach($mid as $key_value => $mid_value){
+                echo 
+
+            }
         }
 
    }
