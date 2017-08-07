@@ -24,7 +24,7 @@ function getMid()
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "event type : ".$arrJson['events'][0]['message']['type'];        
+        $arrPostData['messages'][0]['text'] = "event type = ".$arrJson['events'][0]['message']['type'];        
      }
     
     $ch = curl_init();
