@@ -23,7 +23,7 @@
         echo "<br>";
         
         $chAdd = curl_init();
-        curl_setopt($chAdd, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_member');
+        curl_setopt($chAdd, CURLOPT_URL, 'https://uat.dxplace.com/dx_line/get_line_member');
         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
         curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
