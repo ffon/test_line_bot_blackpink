@@ -16,7 +16,7 @@ function getMid()
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId']."(event type follow : ".$arrJson['events'][0]['type'].")";
+        $arrPostData['messages'][0]['text'] = "สวัสดี ID : ".$arrJson['events'][0]['source']['userId']."(event type : ".$arrJson['events'][0]['type'].")";
         $mid = $arrJson['events'][0]['source']['userId'];
         getName($mid);
  
@@ -63,7 +63,7 @@ function insert_data_tb($data)
 {
     $string = preg_replace('/\s+/', '', $data); 
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/line_member?data='.$string.'&add_by=4');
+    curl_setopt($chAdd, CURLOPT_URL, 'https://uat.dxplace.com/dx_line/line_member?data='.$string.'&add_by=4');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
