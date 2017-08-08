@@ -18,7 +18,7 @@ function getMid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID : ".$arrJson['events'][0]['source']['userId']."(event type : ".$arrJson['events'][0]['type'].")";
         $mid = $arrJson['events'][0]['source']['userId'];
-        getName($mid);
+        //getName($mid);
  
       }else{
         $arrPostData = array();
@@ -57,7 +57,7 @@ function getName($mid)
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
-   insert_data_tb($result);
+   //insert_data_tb($result);
 }
 function insert_data_tb($data)
 {
