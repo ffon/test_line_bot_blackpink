@@ -2,12 +2,12 @@
     
     echo "22";
     echo "<br>";
-    $tokens = array('1' => 'bnPCz7RNBSZ2h/PbGjAPN1iaK4PIIF0MlLrar0iOFi5kpcjb8qGcQCQZngEAnsS2QPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcs7twRoZc+fC59BcRxhwPWlvmr/nXevWi7w1FWg4QoMBwdB04t89/1O/w1cDnyilFU=',
-                    '2' => '7uCUqHp4ZPaCraRiNL+FYnbgH7KSzEME+hIEZvOf0sxRyEuEjQ9O32liOHwmLUFmcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQqHfRVdzDJv4ZBpSy4ql5bt3COy1hmKkVdRlDo1swsePgdB04t89/1O/w1cDnyilFU='
-                    );
+    $tokens = array('1' => 'token'
+                    '2' => 'token'
+                );
                                 //ffon,oil
-    $mids = array('1'=>array('U7de80d0a2ceea863e831375badd2eb55','Ub5fea2ff169cba24b2179fd33e59e454'),
-                  '2'=>array('U7de80d0a2ceea863e831375badd2eb55')
+    $mids = array('1'=>array('mid','mid'),
+                  '2'=>array('mid')
                   );
     $text = 'test';
 

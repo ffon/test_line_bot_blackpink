@@ -26,7 +26,7 @@
         echo "<br>";
  
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_member');
+        curl_setopt($ch, CURLOPT_URL, 'url');
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -48,7 +48,7 @@
                 </div>
                 <?php
                     $ch = curl_init();
-                    curl_setopt($ch, CURLOPT_URL, 'https://uat.dxplace.com/dxtms/get_line_master');
+                    curl_setopt($ch, CURLOPT_URL, 'url');
                     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(

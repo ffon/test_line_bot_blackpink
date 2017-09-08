@@ -4,7 +4,7 @@
 getMid();
 function getMid()
 {
-    $strAccessToken = "bnPCz7RNBSZ2h/PbGjAPN1iaK4PIIF0MlLrar0iOFi5kpcjb8qGcQCQZngEAnsS2QPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcs7twRoZc+fC59BcRxhwPWlvmr/nXevWi7w1FWg4QoMBwdB04t89/1O/w1cDnyilFU=";
+    $strAccessToken = "token";
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
     $strUrl = "https://api.line.me/v2/bot/message/reply";
@@ -41,7 +41,7 @@ function getMid()
 }
 function getName($mid)
 {
-    $strAccessToken = "bnPCz7RNBSZ2h/PbGjAPN1iaK4PIIF0MlLrar0iOFi5kpcjb8qGcQCQZngEAnsS2QPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcs7twRoZc+fC59BcRxhwPWlvmr/nXevWi7w1FWg4QoMBwdB04t89/1O/w1cDnyilFU=";
+    $strAccessToken = "token";
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
     $strUrl = "https://api.line.me/v2/bot/profile/$mid";
@@ -63,7 +63,7 @@ function insert_data_tb($data)
 {
     $string = preg_replace('/\s+/', '', $data); 
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, 'https://uat.dxplace.com/dx_line/line_member?data='.$string.'&add_by=1');
+    curl_setopt($chAdd, CURLOPT_URL, 'url='.$string.'&add_by=1');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(

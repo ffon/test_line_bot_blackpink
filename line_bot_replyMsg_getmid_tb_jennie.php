@@ -4,7 +4,7 @@
 getMid();
 function getMid()
 {
-    $strAccessToken = "4IBuBmV6FywcyJmUK34M8karKQx3d4ferATfOBddUE5lOKYK4hMX5nn6zHmY0xU435cWVjdmcsqIsDjlsWQNO2siGwPWEXtl7Y67lf2v0nEGIAfvuKDtBJZx4JUtwgb+PJWLcRN8TArRFMfNP3ZGKQdB04t89/1O/w1cDnyilFU=";
+    $strAccessToken = "token";
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
     $strUrl = "https://api.line.me/v2/bot/message/reply";
@@ -41,7 +41,7 @@ function getMid()
 }
 function getName($mid)
 {
-    $strAccessToken = "4IBuBmV6FywcyJmUK34M8karKQx3d4ferATfOBddUE5lOKYK4hMX5nn6zHmY0xU435cWVjdmcsqIsDjlsWQNO2siGwPWEXtl7Y67lf2v0nEGIAfvuKDtBJZx4JUtwgb+PJWLcRN8TArRFMfNP3ZGKQdB04t89/1O/w1cDnyilFU=";
+    $strAccessToken = "token";
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
     $strUrl = "https://api.line.me/v2/bot/profile/$mid";

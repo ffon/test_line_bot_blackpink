@@ -19,7 +19,7 @@
 <body>
     <?php
         $chAdd = curl_init();
-        curl_setopt($chAdd, CURLOPT_URL, 'https://uat.dxplace.com/dx_line/get_line_master');
+        curl_setopt($chAdd, CURLOPT_URL, 'url');
         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
         curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
