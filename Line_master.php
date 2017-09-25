@@ -8,7 +8,7 @@
     echo "url en"."<br>";
     echo "<br>";
     var_dump($en_token);
-    
+    exit();
     $chAdd = curl_init();
     curl_setopt($chAdd, CURLOPT_URL,  'url='.$name.'&access_token='.$en_token.'&add_by=1');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
